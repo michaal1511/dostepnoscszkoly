@@ -14,15 +14,13 @@
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>document.documentElement.classList.add('js');</script>
     <title>Monitoring dostępności cyfrowej dla szkół – stała opieka | Itspace Michał Bednarek</title>
     <meta name="description"
-        content="Stały monitoring dostępności cyfrowej dla szkół i placówek oświatowych.Zawsze aktualna deklaracja dostępności, zgodność z WCAG 2.1 AA i z ustawą. 175–420 zł/mies." />
-    <meta name="theme-color" content="#0f4f46" />
+        content="Stały monitoring dostępności cyfrowej dla szkół i placówek oświatowych. Zawsze aktualna deklaracja dostępności, zgodność z WCAG 2.1 AA i z ustawą. 200–450 zł/mies." />
+    <meta name="theme-color" content="#0F4C81" />
     <link rel="canonical" href="https://dostepnoscszkoly.pl/monitoring" />
-    <!-- Favicon inline (SVG, w 1 linii, URL-encoded) -->
     <link rel="icon" type="image/svg+xml" sizes="any"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23103A36'/%3E%3Cpath d='M15 34 l9 9 25-26' fill='none' stroke='%23F5EBDD' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F4C81'/%3E%3Cpath d='M15 34 l9 9 25-26' fill='none' stroke='%23FAFBFC' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
     <meta property="og:title" content="Monitoring dostępności cyfrowej dla szkół – stała opieka, zero stresu" />
     <meta property="og:description"
@@ -31,1303 +29,1089 @@
     <meta property="og:site_name" content="Itspace – Dostępność Szkoły" />
     <meta property="og:url" content="https://dostepnoscszkoly.pl/monitoring" />
     <meta property="og:locale" content="pl_PL" />
-    <style>
-        /* ===== CSS z charakterem (bez tailwindowych bezpiecznych palet) ===== */
-        :root {
-            --ink: #13211E;
-            /* prawie czarny z nutą zieleni */
-            --paper: #F7F3EE;
-            /* ciepły off-white */
-            --accent: #0F4F46;
-            /* głęboki szmaragd */
-            --accent-2: #C94A26;
-            /* ceglana pomarańcz */
-            --accent-3: #606C38;
-            /* głębsza czerwień */
-            --accent-4: #e6390e;
-            /* oliwka */
-            --muted: #9A8C98;
-            /* zgaszony fiolet (ale nie blue→purple) */
-            --ok: #1B7F6B;
-            /* zielony status */
-            --warn: #B47B00;
-            /* miodowy */
-            --shadow-1: 2px 7px 15px rgba(0, 0, 0, .08), -1px 2px 8px rgba(0, 0, 0, .05);
-            --shadow-2: 1px 3px 10px rgba(0, 0, 0, .06), -2px 6px 18px rgba(0, 0, 0, .04);
-            --radius-outer: 22px;
-            /* miękkie, nieidealne zaokrąglenia */
-            --radius-inner: 14px;
-            --ease: cubic-bezier(.22, .61, .36, 1);
-        }
 
-        html {
-            scroll-behavior: smooth
+    <style>
+        /* ===== NOWY MINIMALISTYCZNY DESIGN ===== */
+        :root {
+            --primary: #0F4C81;
+            --accent: #FF6B35;
+            --bg: #FAFBFC;
+            --text: #1A202C;
+            --text-light: #718096;
+            --border: #E2E8F0;
+            --white: #FFFFFF;
+            --success: #10B981;
+            --max-width: 1140px;
         }
 
         * {
-            box-sizing: border-box
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            color: var(--ink);
-            background: var(--paper);
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            text-rendering: optimizeLegibility;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Display font vibe bez zewnętrznych plików – korzystamy z Georgia/serif na nagłówki */
-        h1,
-        h2,
+        /* ===== TYPOGRAPHY ===== */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.15;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
         h3 {
-            font-family: Arial, sans-serif;
-            letter-spacing: .2px
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            line-height: 1.3;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 65ch;
         }
 
         a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
             color: var(--accent);
-            text-underline-offset: 2px
         }
 
         a:focus {
-            outline: 3px solid var(--accent-2);
-            outline-offset: 3px
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 2px;
         }
 
+        /* ===== SKIP LINK ===== */
         .skip-link {
             position: absolute;
             left: -9999px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden
+            top: 8px;
+            z-index: 9999;
+            padding: 0.75rem 1rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
         }
 
         .skip-link:focus {
-            left: 1rem;
-            top: 1rem;
-            width: auto;
-            height: auto;
-            z-index: 1000;
-            background: #fff;
-            border-radius: 8px;
-            padding: .6rem .8rem;
-            box-shadow: var(--shadow-1)
+            left: 8px;
+            outline: 3px solid var(--accent);
         }
 
-        header {
-            position: relative;
-            z-index: 50;
-            backdrop-filter: saturate(110%) blur(6px);
-            background: color-mix(in oklab, var(--paper) 86%, white 14%);
-            border-bottom: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
-        }
-
-        .wrap {
-            max-width: 72rem;
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 1.85rem 2.1rem 1.9rem 1.75rem
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
         nav {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 1.2rem;
-            justify-content: space-between
+            padding: 1.25rem 0;
         }
 
-        .brand {
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
             display: flex;
             align-items: center;
-            gap: .8rem;
-            font-weight: 700
+            gap: 0.5rem;
         }
 
-        .brand .mark {
-            width: 28px;
-            height: 28px;
-            border-radius: 9px;
-            background: radial-gradient(130% 120% at 30% 20%, #134F48 0%, #103A36 60%, #0C2A27 100%);
-            box-shadow: var(--shadow-2)
-        }
-
-        .brand a {
-            color: inherit;
-            text-decoration: none
-        }
-
-        .top-links {
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            border-radius: 6px;
             display: flex;
-            gap: 1rem;
             align-items: center;
-            flex-wrap: wrap
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
-        .top-links a {
-            padding: .55rem .9rem;
-            border-radius: 10px;
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
             text-decoration: none;
-            border: 1px dashed color-mix(in oklab, var(--ink) 20%, transparent);
-        }
-
-        .top-links a:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-1)
-        }
-
-        /* Nawigacja mobilna (hamburger) */
-        .nav-toggle {
-            display: none;
-            align-items: center;
-            gap: .55rem;
-            border: 1px dashed color-mix(in oklab, var(--ink) 20%, transparent);
-            border-radius: 12px;
-            padding: .55rem .75rem;
-            background: #fff;
+            transition: all 0.2s ease;
+            border: none;
             cursor: pointer;
-            transition: transform .18s var(--ease), box-shadow .18s var(--ease);
         }
 
-        .nav-toggle:hover {
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0d3f6b;
             transform: translateY(-1px);
-            box-shadow: var(--shadow-1)
+            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.3);
         }
 
-        .nav-toggle svg {
-            width: 20px;
-            height: 20px
+        .btn-accent {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background: #e55a28;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
         }
 
         /* ===== HERO ===== */
         .hero {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero .wrap {
-            padding: 3.1rem 2.1rem 3.4rem 1.9rem
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5a9e 100%);
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
         }
 
         .hero h1 {
-            font-size: clamp(2.1rem, 3.6vw + 1rem, 3.8rem);
-            line-height: 1.1;
-            margin: .2rem 0 1rem;
-            max-width: 21ch;
+            color: white;
+            margin-bottom: 1.5rem;
         }
 
-        .hero p.lead {
-            font-size: clamp(1.05rem, 1.2vw + .7rem, 1.35rem);
-            color: color-mix(in oklab, var(--ink) 78%, var(--muted));
-            max-width: 50ch
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 auto 2rem;
+            max-width: 60ch;
         }
 
         .hero-badges {
             display: flex;
-            gap: .6rem;
+            gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
-            margin: 1.1rem 0 1.6rem
+            margin: 2rem 0;
         }
 
         .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: .5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
             border-radius: 999px;
-            padding: .35rem .7rem;
-            font-size: .92rem;
-            background: #fff;
-            box-shadow: var(--shadow-1)
-        }
-
-        .badge .dot {
-            width: .55rem;
-            height: .55rem;
-            border-radius: 50%;
-            background: var(--ok)
-        }
-
-        .cta-row {
+            font-size: 0.95rem;
             display: flex;
-            flex-wrap: wrap;
-            gap: .8rem 1rem;
             align-items: center;
-            margin: 1.4rem 0 0
+            gap: 0.5rem;
         }
 
-        .btn {
-            --bg: var(--accent);
-            --fg: #fff;
-            appearance: none;
-            border: 0;
-            cursor: pointer;
-            text-decoration: none;
-            color: var(--fg);
-            background: var(--bg);
-            border-radius: 14px;
-            padding: .9rem 1.2rem;
-            font-weight: 700;
-            box-shadow: var(--shadow-2);
-            transition: transform .22s var(--ease), box-shadow .22s var(--ease), background .22s var(--ease)
+        .badge-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
         }
 
-        .btn:hover {
-            transform: translateY(-2px) rotateZ(-.15deg);
-            box-shadow: 2px 10px 20px rgba(0, 0, 0, .08), -1px 3px 10px rgba(0, 0, 0, .06)
-        }
-
-        .btn:active {
-            transform: translateY(0) scale(.99)
-        }
-
-        .btn.alt {
-            --bg: var(--accent-2)
-        }
-
-        .micro-copy {
-            font-size: .92rem;
-            color: color-mix(in oklab, var(--ink) 65%, var(--muted));
-        }
-        /* mc-brief styles */
-.mc-brief {
-  background: #FDF3E5;
-  color: var(--alert-text);
-  border-top: 1px solid rgba(0,0,0,.06);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-}
-.mc-brief__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 28px 16px;
-}
-.mc-brief__title {
-  margin: 0 0 10px 0;
-  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
-}
-.mc-brief__text {
-  margin: 0 0 16px 0;
-  line-height: 1.6;
-}
-.mc-brief__cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.mc-brief__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 700;
-  border: 1px solid transparent;
-}
-.mc-brief__cta--link {
-  border-color: rgba(0,0,0,.15);
-  background: #FFFFFF;
-  color: var(--alert-text);
-}
-.mc-brief__cta--link:hover,
-.mc-brief__cta--link:focus-visible {
-  text-decoration: underline;
-  outline: var(--focus-ring);
-  outline-offset: 2px;
-}
-.mc-brief__cta--primary {
-  background: var(--alert-cta-bg);
-  color: var(--alert-cta-text);
-  border-color: rgba(0,0,0,.08);
-  box-shadow: var(--shadow);
-  transition: transform .12s ease, background-color .12s ease;
-}
-.mc-brief__cta--primary:hover { background: var(--alert-cta-bg-hover); transform: translateY(-1px); }
-.mc-brief__cta--primary:active { transform: translateY(0); }
-.mc-brief__cta--primary:focus-visible { outline: var(--focus-ring); outline-offset: 2px; box-shadow: none; }
-
-.value-card {
-  background: #F8F9FA;
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-        /* Szkicowane tło – delikatny parallax */
-        .scribble {
-            position: absolute;
-            inset: auto -10% -15% -10%;
-            height: 360px;
-            pointer-events: none;
-            opacity: .18
-        }
-
-        /* ===== SEKCJE ===== */
-        section {
-            padding: 1.1rem 1.9rem 1.3rem 2.15rem
-        }
-
-        .section-head {
+        .hero-cta {
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
             gap: 1rem;
-            margin: 0 0 1.2rem
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
         }
 
-        h2 {
-            font-size: clamp(1.6rem, 2.1vw + 1rem, 2.4rem);
-            margin: 0 0 .6rem;
-            position: relative
+        /* ===== ALERT BAR ===== */
+        .alert-bar {
+            background: #FFF8E1;
+            border-bottom: 1px solid #FFE082;
+            padding: 1rem 0;
         }
 
-        /*    h2 .underline {
-      position: absolute;
-      left: .15rem;
-      bottom: -.35rem;
-      right: 10%;
-      height: 10px;
-      background:
-        radial-gradient(20px 8px at 12px 6px, color-mix(in oklab, var(--accent) 88%, #fff 12%) 0 41%, transparent 42%),
-        linear-gradient(to right, color-mix(in oklab, var(--accent) 85%, #fff 15%) 40%, transparent 40% 45%, color-mix(in oklab, var(--accent) 85%, #fff 15%) 45% 100%);
-      transform: rotateZ(-.6deg)
-    }*/
-
-        /* Grid z lekką nieregularnością */
-        .grid {
-            display: grid;
-            gap: 1.35rem;
-            grid-template-columns: repeat(12, 1fr)
+        .alert-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        .card {
-            background: #fff;
-            border-radius: var(--radius-outer);
-            padding: 1.05rem 1.05rem 1.1rem 1.2rem;
-            box-shadow: var(--shadow-1)
-        }
-
-        .card h3 {
-            margin: .2rem 0 .4rem;
-            font-size: 1.25rem
-        }
-
-        /* Problem cards */
-        .pains .card {
-            grid-column: span 4
-        }
-
-        .pain-icon {
-            font-size: 1.3rem;
-            margin-right: .35rem
-        }
-
-        /* Rozwiązanie – kroki */
-        .steps .step {
-            grid-column: span 6
-        }
-
-        .step-num {
-            display: inline-block;
-            background: var(--accent-3);
-            color: #fff;
-            border-radius: 10px;
-            padding: .2rem .55rem;
-            font-size: .9rem;
-            margin-bottom: .35rem
-        }
-
-        /* Korzyści list */
-        .benefits ul {
-            columns: 2;
-            column-gap: 1.35rem;
+        .alert-content p {
             margin: 0;
-            padding-left: 1.2rem
+            color: var(--text);
+            font-size: 1rem;
         }
 
-        .benefits li {
-            break-inside: avoid;
-            margin: .25rem 0;
+        /* ===== PROBLEM SECTION ===== */
+        .problems-list {
+            list-style: none;
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .problem-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .problem-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .problem-content p {
+            margin: 0;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:first-child {
+            order: 3;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .timeline-content p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .timeline-marker {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            z-index: 2;
+            box-shadow: 0 0 0 8px var(--bg);
+        }
+
+        .timeline-spacer {
+            display: none;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary), #1a5a9e);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-item h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .benefit-item p {
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.15);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pricing-card h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
             font-size: 1.1rem;
         }
 
-        /* Legal callout */
-        .legal {
-            background: #FEF9E6;
-            border-left: 4px solid var(--warn);
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
         }
 
-        /* Cennik */
-        .pricing .card {
-            grid-column: span 4;
-            position: relative
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
         }
 
-        .pricing .price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: .3px
-        }
-
-        .pricing .best {
-            position: absolute;
-            top: -.9rem;
-            right: .9rem;
-            background: var(--accent-2);
-            color: #fff;
-            padding: .25rem .5rem;
-            border-radius: 9px;
-            font-size: .8rem;
-            box-shadow: var(--shadow-2)
-        }
-
-        .audit {
-            border: 4px solid var(--accent-4);
-        }
-
-        .monitoring {
-            border: 4px solid var(--accent);
-        }
-
-        /* Porównanie */
-        .compare .card {
-            grid-column: span 6
-        }
-
-        .compare .total {
-            display: flex;
-            align-items: baseline;
-            gap: .6rem;
-            font-weight: 700
-        }
-
-        /* Dlaczego my */
-        .why .card {
-            grid-column: span 4
-        }
-
-        /* FAQ – details/summary z dostępnością */
         details {
-            background: #fff;
-            border-radius: var(--radius-inner);
-            padding: .8rem 1rem;
-            box-shadow: var(--shadow-1)
-        }
-
-        summary {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
             cursor: pointer;
-            font-weight: 700
         }
 
         details[open] {
-            outline: 2px dashed color-mix(in oklab, var(--accent) 30%, transparent)
+            border-color: var(--primary);
         }
 
-        /* CTA końcowe */
-        .final {
-            background: linear-gradient(180deg, color-mix(in oklab, #fff 85%, var(--paper)) 0%, var(--paper) 100%)
+        summary {
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--text);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Footer */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        details p {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ===== LEGAL ===== */
+        .legal-box {
+            background: #FFF8E1;
+            border-left: 4px solid #FFA726;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        .legal-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .legal-box p {
+            margin-bottom: 1rem;
+        }
+
+        .legal-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
-            border-top: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
-            background: #fff
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0 2rem;
         }
 
-        /* Scroll reveal */
-        .reveal {
-            opacity: 1;
-            transform: none
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
         }
 
-        .js .reveal {
-            opacity: 0;
-            transform: translateY(14px)
+        footer h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
 
-        .js .reveal.in-view {
-            opacity: 1;
-            transform: none;
-            transition: opacity .6s var(--ease), transform .6s var(--ease)
-        }
-:root {
-  --alert-bg: #FFF8E1;        /* jasny żółty (kontrast z czernią AA) */
-  --alert-text: #1A1A1A;      /* prawie czarny */
-  --alert-accent: #B26A00;    /* ciemny bursztyn dla ikon/obwódek/hover */
-  --alert-link: #1A1A1A;      /* link w tekście – ciemny dla czytelności */
-  --alert-cta-bg: #FFC107;    /* bursztynowy przycisk */
-  --alert-cta-text: #1A1A1A;  /* tekst na przycisku */
-  --alert-cta-bg-hover: #FFB300;
-  --focus-ring: 2px solid #1A73E8; /* wyraźny focus */
-  --radius: 12px;
-  --shadow: 0 4px 14px rgba(0,0,0,.08);
-  --gap: 16px;
-  --maxw: 1200px;
-  --padY: 14px;
-  --padX: 16px;
-}
-
-.alert-bar {
-  background: var(--alert-bg);
-  color: var(--alert-text);
-  padding: 8px 0;
-  border-top: 1px solid rgba(0,0,0,.06);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-}
-
-.alert-bar__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--gap);
-  align-items: center;
-  padding: var(--padY) var(--padX);
-}
-
-.alert-bar__text {
-  margin: 0;
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-.alert-bar__link {
-  color: var(--alert-link);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  font-weight: 600;
-}
-.alert-bar__link:hover,
-.alert-bar__link:focus {
-  text-decoration: underline;
-  outline: none;
-}
-
-.alert-bar__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  background: var(--alert-cta-bg);
-  color: var(--alert-cta-text);
-  border-radius: var(--radius);
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: var(--shadow);
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: transform .12s ease, background-color .12s ease, box-shadow .12s ease;
-}
-.alert-bar__cta:hover {
-  background: var(--alert-cta-bg-hover);
-  transform: translateY(-1px);
-}
-.alert-bar__cta:active {
-  transform: translateY(0);
-}
-.alert-bar__cta:focus-visible {
-  outline: var(--focus-ring);
-  outline-offset: 2px;
-  box-shadow: none;
-}
-
-/* Mobile: CTA pod tekstem, pełna szerokość */
-@media (max-width: 768px) {
-  .alert-bar__inner {
-    grid-template-columns: 1fr;
-  }
-  .alert-bar__cta {
-    width: 100%;
-  }
-}
-
-/* Preferencje systemowe: mniej ruchu */
-@media (prefers-reduced-motion: reduce) {
-  .alert-bar__cta {
-    transition: none;
-  }
-}
-
-        /* Nieregularne drobnostki (2–3% off-center) na dużych ekranach */
-        @media (min-width: 980px) {
-            .hero h1 {
-                transform: translateX(-0.8%)
-            }
-
-            .pains .card:nth-child(2) {
-                transform: translateY(.6%)
-            }
-
-            .steps .step:nth-child(odd) {
-                transform: translateX(-0.8%)
-            }
-
-            .steps .step:nth-child(even) {
-                transform: translateX(0.9%)
-            }
+        footer p {
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
-        /* Mobile z osobowością – inny układ, nie tylko skalowanie */
-        @media (max-width: 799px) {
-            .nav-toggle {
-                display: none
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
             }
 
-            header .wrap {
-                padding: .7rem 1rem
+            .hero {
+                padding: 4rem 0;
             }
 
-            header .wrap {
-                padding: .7rem 1rem
+            .nav-links {
+                display: none;
             }
 
-            .wrap {
-                padding: 1.2rem 1rem 1.3rem 1rem
-            }
-
-            nav {
+            .hero-cta {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: .6rem
             }
 
-            #primary-nav {
-                display: grid;
+            .hero-cta .btn {
                 width: 100%;
-                grid-template-columns: 1fr 1fr;
-                gap: .6rem
-            }
-
-            #primary-nav .btn {
-                grid-column: 1 / -1;
-                width: 100%;
-                text-align: center
-            }
-
-            .grid {
-                grid-template-columns: 1fr
-            }
-
-            .pains .card,
-            .steps .step,
-            .pricing .card,
-            .compare .card,
-            .why .card {
-                grid-column: 1 / -1;
                 text-align: center;
             }
 
-            .benefits ul {
-                columns: 1
+            .timeline::before {
+                left: 24px;
             }
 
-            .cta-row {
+            .timeline-item {
+                grid-template-columns: auto 1fr;
+                gap: 1.5rem;
+            }
+
+            .timeline-content:first-child {
+                display: none;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content:first-child {
+                display: none;
+            }
+
+            .timeline-marker {
+                width: 40px;
+                height: 40px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .alert-content {
                 flex-direction: column;
-                align-items: stretch
+                align-items: flex-start;
             }
 
-            .cta-row .btn {
-                width: 100%
+            .alert-content .btn {
+                width: 100%;
             }
-
-            .hero .wrap {
-                padding: 2rem 1rem 2.2rem 1rem
-            }
-
-            .hero h1 {
-                max-width: 18ch
-            }
-
-            .scribble {
-                height: 220px
-            }
-
-            .brand .mark {
-                width: 24px;
-                height: 24px
-            }
-
-            section {
-                padding: 0.1rem 1.9rem 0.3rem 2.15rem
-            }
-
-            .benefits li {
-                break-inside: avoid;
-                margin: .25rem 0;
-                font-size: 1.0rem;
-            }
-
         }
 
-        /* Preferencje zmniejszonego ruchu */
+        /* ===== ACCESSIBILITY ===== */
         @media (prefers-reduced-motion: reduce) {
-            .reveal {
-                transition: none
+            * {
+                animation: none !important;
+                transition: none !important;
             }
+        }
 
-            .btn:hover {
-                transform: none
-            }
-
-            .scribble {
-                display: none
-            }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPGKHJK9Q9"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-NPGKHJK9Q9');
-</script>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5XF9ZZW" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <a class="skip-link" href="#main">Pomiń do treści</a>
 
-    <header aria-label="Górna nawigacja">
-        <div class="wrap">
+    <a class="skip-link" href="#main">Pomiń do treści głównej</a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
             <nav>
-                <div class="brand">
-                    <span class="mark" aria-hidden="true"></span>
-                    <a href="https://dostepnoscszkoly.pl/#" aria-label="Itspace Michał Bednarek – strona główna">
-                        <strong>Itspace Michał Bednarek</strong>
-                        <span style="display:block;font-size:0.85rem;font-weight:400;opacity:0.85;">Proste rozwiązania dostępności cyfrowej</span>
-                    </a>
-                </div>
-
-                <div class="top-links" id="primary-nav" role="navigation" aria-label="Nawigacja główna">
-                    <a href="#oferta">Oferta</a>
-                    <a href="#cennik">Cennik</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="tel:788086901">📞 788 086 901</a>
-                    <a class="btn"
-                        href="mailto:kontakt@dostepnoscszkoly.pl?subject=Rozmowa%20o%20monitoringu%20dost%C4%99pno%C5%9Bci&body=Dzie%C5%84%20dobry%2C%0A%0AChcia%C5%82bym%2Fchcia%C5%82abym%20porozmawia%C4%87%20o%20monitoringu%20dost%C4%99pno%C5%9Bci.%0A%0ANazwa%20plac%C3%B3wki%3A%0AStrona%3A%0ATelefon%3A%0A">Umów
-                        rozmowę</a>
-                </div>
+                <a href="#" class="logo">
+                    <span class="logo-icon">✓</span>
+                    <span>Dostępność Szkoły</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#oferta">Jak działamy</a></li>
+                    <li><a href="#cennik">Cennik</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="tel:788086901" class="btn btn-outline">📞 788 086 901</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <!-- ===== HERO ===== -->
-        <section class="hero" aria-labelledby="h-hero">
-            <svg class="scribble" aria-hidden="true" viewBox="0 0 800 200" preserveAspectRatio="none">
-                <path d="M10 120 Q 200 10, 390 110 T 780 100" stroke="#0F4F46" stroke-width="9" fill="none"
-                    opacity=".18" />
-                <path d="M20 170 Q 200 70, 380 160 T 760 150" stroke="#E07A5F" stroke-width="6" fill="none"
-                    opacity=".18" />
-            </svg>
-            <div class="wrap">
-                <h1 id="h-hero">Monitoring dostępności stron szkół – żeby kontrola Ministerstwa nie była zaskoczeniem</h1>
-                <p class="lead">o miesiąc sprawdzamy stronę szkoły, poprawiamy problemy WCAG i pilnujemy deklaracji dostępności. Krócej: masz spokój i
-                zgodność z prawem.</p>
-                <div class="hero-badges" aria-label="Najważniejsze korzyści">
-                    <span class="badge" aria-live="polite"><span class="dot"></span> Stały monitoring + szybkie poprawki</span>
-                    <span class="badge"><span class="dot" style="background:var(--accent-2)"></span> Aktualna Deklaracja Dostępności</span>
-                    <span class="badge"><span class="dot" style="background:var(--accent-3)"></span> Przygotowanie pod badanie Ministerstwa</span>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <h1>Monitoring dostępności cyfrowej dla szkół</h1>
+                <p>Co miesiąc sprawdzamy stronę szkoły, poprawiamy problemy WCAG i pilnujemy deklaracji dostępności. Krócej: masz spokój i zgodność z prawem.</p>
+
+                <div class="hero-badges">
+                    <span class="badge">
+                        <span class="badge-icon"></span>
+                        Stały monitoring + szybkie poprawki
+                    </span>
+                    <span class="badge">
+                        <span class="badge-icon"></span>
+                        Aktualna Deklaracja Dostępności
+                    </span>
+                    <span class="badge">
+                        <span class="badge-icon"></span>
+                        Gotowość na kontrolę MC
+                    </span>
                 </div>
-                <div class="cta-row" role="group" aria-label="Główne działania">
-                    <a class="btn js-cta-primary"
-                        href="mailto:kontakt@dostepnoscszkoly.pl?subject=Rozmowa%20o%20monitoringu%20dost%C4%99pno%C5%9Bci&body=Dzie%C5%84%20dobry%2C%0A%0AChcemy%20porozmawia%C4%87%20o%20monitoringu%20dost%C4%99pno%C5%9Bci%20dla%20naszej%20plac%C3%B3wki.%0A%0ANazwa%20plac%C3%B3wki%3A%0AStrona%3A%0ATelefon%3A%0A%0APreferowany%20termin%3A%0A"
-                        data-cta-location="hero" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({ event:'cta_primary_click', cta_location:this.dataset.ctaLocation, ab_variant:document.documentElement.getAttribute('data-ab')||'A'    });">Umów 15-min konsultację</a>
-<a class="btn plan-card__cta js-plan-card" href="#h-cennik" onclick="window.dataLayer.push({
-     event:'cta_cennik_scroll',
-     cta_name:'Klknięcie przycisku Wybieram plan i przeniesienie widoku do Cenników'
-   });">
-  Wybieram plan
-</a>
+
+                <div class="hero-cta">
+                    <a href="mailto:kontakt@dostepnoscszkoly.pl?subject=Rozmowa%20o%20monitoringu%20dostępności&body=Dzień%20dobry,%0A%0AChcemy%20porozmawiać%20o%20monitoringu%20dostępności%20dla%20naszej%20placówki.%0A%0ANazwa%20placówki:%0AStrona:%0ATelefon:%0A%0APreferowany%20termin:%0A"
+                        class="btn btn-accent">Umów bezpłatną konsultację (15 min)</a>
+                    <a href="#cennik" class="btn btn-outline" style="background: white; color: var(--primary);">Zobacz cennik</a>
                 </div>
             </div>
-            <!-- Pasek pilności: pod sekcją HERO -->
-            <aside class="alert-bar" role="status" aria-live="polite">
-                <div class="alert-bar__inner" role="document">
-                    <p class="alert-bar__text">
-                        Ministerstwo Cyfryzacji co roku publikuje
-                        <a class="alert-bar__link" href="https://www.gov.pl/web/dostepnosc-cyfrowa/monitoring" target="_blank"
-                            rel="noopener">
-                            wykaz stron do badania szczegółowego
-                        </a>.
-                        Nie wiesz, czy Twoja szkoła może się tam znaleźć? Pomożemy Ci być przygotowanym.
+        </section>
+
+        <!-- ALERT BAR -->
+        <div class="alert-bar">
+            <div class="container">
+                <div class="alert-content">
+                    <p>
+                        <strong>Ministerstwo Cyfryzacji</strong> co roku publikuje wykaz stron do badania szczegółowego.
+                        Nie wiesz, czy Twoja szkoła może się tam znaleźć?
                     </p>
-            
-                    <a href="#kontakt" class="alert-bar__cta" role="button" aria-label="Umów darmową mini-ocenę pod badanie MC">
-                        Darmowa mini-ocena: czy przejdziesz badanie MC?
-                    </a>
+                    <a href="mailto:kontakt@dostepnoscszkoly.pl?subject=Mini-ocena%20strony&body=Dzień%20dobry,%20chcemy,%20aby%20przygotowali%20Państwo%20dla%20nas%20mini-ocenę%20naszej%20strony%20[adres%20www%20Państwa%20strony],%20czy%20strona%20ma%20szansę%20przejść%20kontrolę%20Ministerstwa."
+                        class="btn btn-primary">Zamów mini-ocenę (0 zł)</a>
                 </div>
-            </aside>
+            </div>
+        </div>
+
+        <!-- PROBLEMY -->
+        <section id="problemy">
+            <div class="container">
+                <h2>Znasz te problemy?</h2>
+                <ul class="problems-list">
+                    <li class="problem-item">
+                        <span class="problem-icon">⚠️</span>
+                        <div class="problem-content">
+                            <h3>Strona w wykazie MC do badania szczegółowego</h3>
+                            <p>To znak, że Ministerstwo znalazło poważne problemy. Bez szybkiej reakcji grozi kara finansowa.</p>
+                        </div>
+                    </li>
+                    <li class="problem-item">
+                        <span class="problem-icon">⏰</span>
+                        <div class="problem-content">
+                            <h3>Brak czasu i kadry</h3>
+                            <p>Nauczyciele toną w obowiązkach. Nikt nie pilnuje dostępności, aż do kontroli.</p>
+                        </div>
+                    </li>
+                    <li class="problem-item">
+                        <span class="problem-icon">📄</span>
+                        <div class="problem-content">
+                            <h3>Brak corocznego przeglądu deklaracji dostępności</h3>
+                            <p>Deklaracja musi być aktualizowana do 31 marca każdego roku. To obowiązek prawny (art. 11 ustawy).</p>
+                        </div>
+                    </li>
+                    <li class="problem-item">
+                        <span class="problem-icon">❓</span>
+                        <div class="problem-content">
+                            <h3>Co właściwie poprawić?</h3>
+                            <p>PDF-y, zdjęcia, ogłoszenia. Kto sprawdza kontrast, opisy alternatywne, strukturę nagłówków?</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <!-- ===== PROBLEMY ===== -->
-        <section aria-labelledby="h-problemy" class="reveal">
-            <div class="wrap">
-                <div class="section-head">
-                    <h2 id="h-problemy">Znasz te problemy? <span aria-hidden="true" class="underline"></span></h2>
+        <!-- JAK DZIAŁAMY -->
+        <section id="oferta" style="background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center;">Jak wygląda współpraca</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Start: Pierwsze 2 tygodnie</h3>
+                            <p><strong>Audyt wstępny</strong> – sprawdzamy całą stronę pod kątem WCAG 2.1</p>
+                            <p><strong>Raport</strong> – lista priorytetów do poprawy</p>
+                            <p><strong>Deklaracja</strong> – przygotowujemy lub aktualizujemy dokument</p>
+                        </div>
+                        <div class="timeline-marker">START</div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-marker">30 DNI</div>
+                        <div class="timeline-content">
+                            <h3>Co miesiąc</h3>
+                            <p><strong>Monitoring i reakcja</strong> – skanujemy automatycznie + sprawdzamy ręcznie nowe treści</p>
+                            <p><strong>Poprawki</strong> – zgłaszamy błędy lub poprawiamy bezpośrednio (zależnie od pakietu)</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Co kwartał</h3>
+                            <p><strong>Raport szczegółowy</strong> – co poprawiono, co wymaga uwagi</p>
+                            <p><strong>Konsultacja</strong> – rozmowa telefoniczna (w wyższych pakietach)</p>
+                        </div>
+                        <div class="timeline-marker">90 DNI</div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-marker">365 DNI</div>
+                        <div class="timeline-content">
+                            <h3>Co rok (obowiązek prawny)</h3>
+                            <p><strong>Aktualizacja deklaracji</strong> – do 31 marca zgodnie z art. 11 ustawy</p>
+                            <p><strong>Raport roczny</strong> – pełna dokumentacja dla dyrektora</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid pains">
-                    <article class="card">
-                        <h3><span class="pain-icon" aria-hidden="true">⚠️</span>Strona znalazła się w wykazie stron
-                            internetowych do badania szczegółowego?</h3>
-                        <p>To znak, że Ministerstwo znalazło poważne problemy na Twojej stronie.</p>
-                    </article>
-                    <article class="card">
-                        <h3><span class="pain-icon" aria-hidden="true">⏰</span>Brak czasu i kadry</h3>
-                        <p>Nauczyciele toną w obowiązkach. Nikt nie pilnuje dostępności, aż do kontroli.</p>
-                    </article>
-                    <article class="card">
-                        <h3><span class="pain-icon" aria-hidden="true">📄</span>Brak corocznego przeglądu deklaracji
-                            dostępności?</h3>
-                        <p>Deklaracja dostępności musi być przeglądana i aktualizowana co roku. Obligatryjnie.</p>
-                        <p><a href="/deklaracja-dostepnosci.html">Przeczytaj więcej o deklaracji dostępności</a></p>
-                    </article>
-                    <article class="card">
-                        <h3><span class="pain-icon" aria-hidden="true">❓</span>Co właściwie poprawić?</h3>
-                        <p>PDF-y, zdjęcia, ogłoszenia. Kto sprawdza kontrast, opisy alternatywne, strukturę nagłówków?
-                        </p>
-                    </article>
+
+                <div class="legal-box">
+                    <h3>Co jeśli trafi was kontrola z Ministerstwa?</h3>
+                    <p>Masz pełną dokumentację: raporty, historię poprawek, aktualną deklarację. To pokazuje "należytą staranność" i minimalizuje ryzyko kary.</p>
+                    <p><strong>Dodatkowo</strong> – pomagamy przygotować odpowiedzi na pytania inspektorów.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ===== JAK WYGLĄDA WSPÓŁPRACA ===== -->
-        <section id="oferta" aria-labelledby="h-wspolpraca" class="reveal">
-            <div class="wrap">
-                <div class="section-head">
-                    <h2 id="h-wspolpraca">Jak wygląda współpraca <span class="underline" aria-hidden="true"></span></h2>
-                </div>
-
-                <div class="card" style="margin-bottom:1.5rem;background:#F0F7F4;padding:1.5rem;">
-                    <h3 style="margin-top:0;">Start: Pierwsze 2 tygodnie</h3>
-                    <ul style="margin-bottom:0;">
-                        <li><strong>Audyt wstępny</strong> – sprawdzamy całą stronę pod kątem WCAG 2.1 (kontrast, nagłówki, linki, formularze, PDF-y)</li>
-                        <li><strong>Raport z priorytetami</strong> – dostajesz listę tego, co wymaga pilnej poprawy</li>
-                        <li><strong>Pierwsza aktualizacja Deklaracji Dostępności</strong> – przygotowujemy lub aktualizujemy dokument</li>
-                    </ul>
-                </div>
-
-                <div class="grid steps">
-                    <div class="card step">
-                        <div class="step-num">Co miesiąc</div>
-                        <h3>Monitoring i szybka reakcja</h3>
-                        <p>Skanujemy stronę automatycznie + sprawdzamy ręcznie nowe treści. Wykryte błędy zgłaszamy do Was lub poprawiamy bezpośrednio (zależnie od pakietu).</p>
-                    </div>
-                    <div class="card step">
-                        <div class="step-num">Co kwartał</div>
-                        <h3>Raport i konsultacja</h3>
-                        <p>Otrzymujesz szczegółowy raport: co zostało poprawione, co wymaga uwagi, jak wygląda stan strony. W wyższych pakietach – dodatkowa konsultacja telefoniczna.</p>
-                    </div>
-                    <div class="card step">
-                        <div class="step-num">Co rok</div>
-                        <h3>Aktualizacja deklaracji (obowiązek prawny)</h3>
-                        <p>Do 31 marca każdego roku aktualizujemy Deklarację Dostępności zgodnie z art. 11 ustawy. Ty masz spokój – my pilnujemy terminów.</p>
-                    </div>
-                </div>
-
-                <aside class="card" style="margin-top:1.5rem;background:#FEF9E6;border-left:4px solid var(--warn);">
-                    <h3 style="margin-top:0;">Co jeśli trafi was kontrola z Ministerstwa?</h3>
-                    <p style="margin-bottom:0;">Masz pełną dokumentację: raporty, historię poprawek, aktualną deklarację. To pokazuje "należytą staranność" i minimalizuje ryzyko kary. Dodatkowo – pomagamy przygotować odpowiedzi na pytania inspektorów.</p>
-                </aside>
-            </div>
-        </section>
-
-        <!-- ===== CO OTRZYMASZ ===== -->
-        <section aria-labelledby="h-korzysci" class="reveal">
-            <div class="wrap">
-                <div class="section-head">
-                    <h2 id="h-korzysci">Co zyskujesz <span class="underline" aria-hidden="true"></span></h2>
-                </div>
-                <div class="grid" style="grid-template-columns:repeat(12,1fr);">
-                    <div class="card" style="grid-column:span 3;">
+        <!-- KORZYŚCI -->
+        <section>
+            <div class="container">
+                <h2 style="text-align: center;">Co zyskujesz</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🛡️</div>
                         <h3>Spokój dyrektora</h3>
-                        <p>Aktualna deklaracja, raporty i dokumentacja – wszystko w jednym miejscu, gotowe na wypadek kontroli.</p>
+                        <p>Aktualna deklaracja, raporty i dokumentacja – wszystko gotowe na wypadek kontroli</p>
                     </div>
-                    <div class="card" style="grid-column:span 3;">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📉</div>
                         <h3>Mniej ryzyka</h3>
-                        <p>Stały monitoring wykrywa błędy wcześniej niż kontrola MC. Minimalizujesz ryzyko kar finansowych.</p>
+                        <p>Monitoring wykrywa błędy wcześniej niż kontrola MC. Minimalizujesz ryzyko kar</p>
                     </div>
-                    <div class="card" style="grid-column:span 3;">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⏱️</div>
                         <h3>Oszczędność czasu</h3>
-                        <p>Nauczyciele i sekretariat dostają konkretne instrukcje lub gotowe poprawki – nie muszą być ekspertami WCAG.</p>
+                        <p>Sekretariat dostaje konkretne instrukcje – nie musicie być ekspertami WCAG</p>
                     </div>
-                    <div class="card" style="grid-column:span 3;">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
                         <h3>Oszczędność pieniędzy</h3>
-                        <p>Abonament 200–450 zł/msc to 2–5 razy mniej niż koszt jednorazowego audytu (5–20 tys. zł).</p>
+                        <p>200–450 zł/msc to 2–5 razy mniej niż jednorazowy audyt (5–20 tys. zł)</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== RAMY PRAWNE ===== -->
-        <section aria-labelledby="h-prawo" class="reveal">
-            <div class="wrap">
-                <div class="card legal">
-                    <h2 id="h-prawo">Podstawa prawna</h2>
-                    <p>Ustawa z 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych
-                        podmiotów
-                        publicznych.</p>
-                    <p><strong>Art. 11 ustawy (<a
-                                href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20190000848/T/D20190848L.pdf">treść
-                                artykułu</a>) mówi o konieczności przeglądu i atualizacji deklaracji dostepności
-                            do 31 marca każdego roku</strong>. </p>
+        <!-- CENNIK -->
+        <section id="cennik" class="pricing">
+            <div class="container">
+                <h2 style="text-align: center;">Cennik</h2>
+                <p style="text-align: center; margin: 0 auto 0;">Wybierz wariant dopasowany do wielkości szkoły. Możesz zrezygnować po okresie ustalonym w umowie.</p>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Podstawowy</h3>
+                        <div class="price">200 zł</div>
+                        <span class="price-period">netto/miesiąc</span>
+                        <ul class="pricing-features">
+                            <li>1 strona</li>
+                            <li>Posty z ostatnich 3 miesięcy</li>
+                            <li>Monitoring miesięczny</li>
+                            <li>Wsparcie e-mail</li>
+                        </ul>
+                        <a href="mailto:kontakt@dostepnoscszkoly.pl?subject=Monitoring%20dostępności%20-%20zamówienie&body=Dzień%20dobry,%0AChcę%20zamówić%20Wariant%20podstawowy.%0A%0ANazwa%20placówki:%0AStrona:%0AKontakt:%0A%0AProszę%20o%20przesłanie%20umowy."
+                            class="btn btn-primary">Wybieram ten plan</a>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <span class="pricing-badge">Najczęściej wybierany</span>
+                        <h3>Rozszerzony</h3>
+                        <div class="price">350 zł</div>
+                        <span class="price-period">netto/miesiąc</span>
+                        <ul class="pricing-features">
+                            <li>Do 2 stron</li>
+                            <li>Posty z ostatnich 6 miesięcy</li>
+                            <li>Monitoring + raport rozszerzony</li>
+                            <li>Wsparcie e-mail + 1 konsultacja/kwartał</li>
+                        </ul>
+                        <a href="mailto:kontakt@dostepnoscszkoly.pl?subject=Monitoring%20dostępności%20-%20zamówienie&body=Dzień%20dobry,%0AChcę%20zamówić%20Wariant%20rozszerzony.%0A%0ANazwa%20placówki:%0AStrona:%0AKontakt:%0A%0AProszę%20o%20przesłanie%20umowy."
+                            class="btn btn-primary">Wybieram ten plan</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>Kompleksowy</h3>
+                        <div class="price">450 zł</div>
+                        <span class="price-period">netto/miesiąc</span>
+                        <ul class="pricing-features">
+                            <li>Do 2 stron</li>
+                            <li>Posty z ostatnich 12 miesięcy</li>
+                            <li>Monitoring + raport rozszerzony</li>
+                            <li>Wsparcie e-mail + 2 konsultacje/kwartał</li>
+                            <li>Priorytet reakcji</li>
+                        </ul>
+                        <a href="mailto:kontakt@dostepnoscszkoly.pl?subject=Monitoring%20dostępności%20-%20zamówienie&body=Dzień%20dobry,%0AChcę%20zamówić%20Wariant%20kompleksowy.%0A%0ANazwa%20placówki:%0AStrona:%0AKontakt:%0A%0AProszę%20o%20przesłanie%20umowy."
+                            class="btn btn-primary">Wybieram ten plan</a>
+                    </div>
+                </div>
+
+                <div class="legal-box" style="margin-top: 3rem;">
+                    <h3>Dlaczego abonament?</h3>
+                    <p>Jednorazowy audyt to koszt kilku–kilkunastu tysięcy. Abonament rozkłada wydatek i daje stałą opiekę – wtedy, kiedy pojawiają się nowe treści.</p>
+                    <p><strong>Dostępność to proces</strong>: zmiany na stronie, nowe pliki, aktualizacje prawa. Z nami masz spokój i papierkologię ogarniętą.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORÓWNANIE -->
+        <section style="background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center;">Audyt vs Monitoring</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div style="background: #FFF8E1; padding: 2rem; border-radius: 8px; border: 2px solid #FFE082;">
+                        <h3 style="color: #F57C00; margin-bottom: 1rem;">Jednorazowy audyt</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">5 000–20 000 zł</p>
+                        <p style="margin-bottom: 1rem;">Czekanie: 1–3 miesiące</p>
+                        <p style="margin: 0; font-weight: 600;">Raz na rok</p>
+                    </div>
+                    <div style="background: #E3F2FD; padding: 2rem; border-radius: 8px; border: 2px solid var(--primary);">
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Stały monitoring</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">200–450 zł/msc</p>
+                        <p style="margin-bottom: 1rem;">Reakcja: na bieżąco</p>
+                        <p style="margin: 0; font-weight: 600;">Spokój cały rok</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container">
+                <h2 style="text-align: center;">Najczęstsze pytania</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Co jeśli moja strona znalazła się w wykazie MC?</summary>
+                        <p>To znak, że tym bardziej nie ma na co czekać. Jeśli nie poprawisz strony, a Ministerstwo sprawdza to co roku, narażasz się na karę finansową.</p>
+                    </details>
+                    <details>
+                        <summary>Czy musimy mieć to z mocy prawa?</summary>
+                        <p>Monitoring nie jest wymagany, ale strona ma być dostępna i deklaracja aktualna. Monitoring to najtańszy sposób utrzymania zgodności.</p>
+                    </details>
+                    <details>
+                        <summary>Czy to zastępuje audyt?</summary>
+                        <p>To stałe wsparcie zamiast jednorazowego audytu. Gdy pełny audyt będzie konieczny – powiemy wprost.</p>
+                    </details>
+                    <details>
+                        <summary>Co jeśli nie macie dostępu do strony?</summary>
+                        <p>Dajemy instrukcje dla wykonawcy/IT; możemy też wdrożyć poprawki (zależnie od pakietu).</p>
+                    </details>
+                    <details>
+                        <summary>Na jak długo jest umowa?</summary>
+                        <p>Rekomendujemy minimum 12 miesięcy dla pełnego cyklu (w tym roczna aktualizacja deklaracji).</p>
+                    </details>
+                    <details>
+                        <summary>Czy przygotujecie nas na kontrolę MC?</summary>
+                        <p>Tak. Dostajesz raporty i listę wdrożeń; w razie kontroli masz komplet materiałów do okazania inspektorom.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRAWNE -->
+        <section style="background: var(--white);">
+            <div class="container">
+                <div class="legal-box">
+                    <h3>Podstawa prawna</h3>
+                    <p>Ustawa z 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych.</p>
+                    <p><strong>Art. 11 ustawy</strong> (<a href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20190000848/T/D20190848L.pdf" target="_blank" rel="noopener">treść artykułu</a>) mówi o konieczności przeglądu i aktualizacji deklaracji dostępności do 31 marca każdego roku.</p>
                     <p>W ramach monitoringu robimy to za Was. Nie musicie o tym pamiętać!</p>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CENNIK ===== -->
-        <section id="cennik" aria-labelledby="h-cennik" class="reveal">
-            <div class="wrap">
-                <div class="section-head">
-                    <h2 id="h-cennik">Cennik i warunki <span class="underline" aria-hidden="true"></span></h2>
-                </div>
-                <p class="value-card">Wybierz wariant dopasowany do wielkości szkoły. Możesz zrezygnować po okresie, który ustalimy w umowie.</p>
-                <div class="grid pricing">
-                    <article class="card" aria-label="Wariant podstawowy">
-                        <h3>Wariant podstawowy</h3>
-                        <div class="price">200 zł netto/mies.</div>
-                        <ul>
-                            <li>1 strona</li>
-                            <li>Dostosowanie postów* z ostatnich 3 miesięcy</li>
-                            <li>Miesięczny monitoring + raport skrócony</li>
-                            <li>Wsparcie e-mail</li>
-                        </ul>
-                        
-                        <p><a class="btn plan-card__cta js-plan-card"
-  data-package-name="podstawowy"
-  onclick="window.dataLayer.push({
-    event:'plan_card_select',
-    package_name:this.dataset.packageName,
-    ab_variant:document.documentElement.getAttribute('data-ab')||'A'
-  });" href="mailto:kontakt@dostepnoscszkoly.pl?subject=Monitoring%20dost%C4%99pno%C5%9Bci%20-%20zam%C3%B3wienie&body=Dzie%C5%84%20dobry%2C%0AChc%C4%99%20zam%C3%B3wi%C4%87%20Wariant%20podstawowy.%0A%0ANazwa%20plac%C3%B3wki%3A%0AStrona%3A%0AKontakt%3A%0A%0AProsz%C4%99%20o%20przes%C5%82anie%20umowy.">
-  Wybieram plan
-</a></p>
-                    </article>
-                    <article class="card"
-                        aria-label="Wariant rozszerzony - najczęściej wybierany przez Klientów">
-                        <span class="best" aria-hidden="true">Najczęściej wybierany</span>
-                        <h3>Wariant rozszerzony</h3>
-                        <div class="price">350 zł netto/msc</div>
-                        <ul>
-                            <li>do 2 stron</li>
-                            <li>Dostosowanie postów* z ostatnich 6 miesięcy</li>
-                            <li>Miesięczny monitoring + raport rozszerzony</li>
-                            <li>Wsparcie e-mail + 1 konsultacja/kwartał</li>
-                        </ul>
-                        <p><a class="btn plan-card__cta js-plan-card"
-  data-package-name="rozszerzony"
-  onclick="window.dataLayer.push({
-    event:'plan_card_select',
-    package_name:this.dataset.packageName,
-    ab_variant:document.documentElement.getAttribute('data-ab')||'A'
-  });" href="mailto:kontakt@dostepnoscszkoly.pl?subject=Monitoring%20dost%C4%99pno%C5%9Bci%20-%20zam%C3%B3wienie&body=Dzie%C5%84%20dobry%2C%0AChc%C4%99%20zam%C3%B3wi%C4%87%20Wariant%20rozszerzony.%0A%0ANazwa%20plac%C3%B3wki%3A%0AStrona%3A%0AKontakt%3A%0A%0AProsz%C4%99%20o%20przes%C5%82anie%20umowy.">
-  Wybieram plan
-</a>
-</p>
-                    </article>
-                    <article class="card" aria-label="Wariant kompleksowy">
-                        <h3>Wariant kompleksowy</h3>
-                        <div class="price">450 zł netto/msc</div>
-                        <ul>
-                            <li>do 2 stron</li>
-                            <li>Dostosowanie postów* z ostatnich 12 miesięcy</li>
-                            <li>Miesięczny monitoring + raport rozszerzony</li>
-                            <li>Wsparcie e-mail + 2 konsultacje/kwartał</li>
-                            <li>Priorytet reakcji na zgłoszenia</li>
-                        </ul>
-                        <p>
-                            <a class=" btn plan-card__cta js-plan-card"
-  data-package-name="kompleksowy"
-  onclick="window.dataLayer.push({
-    event:'plan_card_select',
-    package_name:this.dataset.packageName,
-    ab_variant:document.documentElement.getAttribute('data-ab')||'A'
-  });" href="mailto:kontakt@dostepnoscszkoly.pl?subject=Monitoring%20dost%C4%99pno%C5%9Bci%20-%20zam%C3%B3wienie&body=Dzie%C5%84%20dobry%2C%0AChc%C4%99%20zam%C3%B3wi%C4%87%20Wariant%20kompleksowy.%0A%0ANazwa%20plac%C3%B3wki%3A%0AStrona%3A%0AKontakt%3A%0A%0AProsz%C4%99%20o%20przes%C5%82anie%20umowy.">
-  Wybieram plan
-</a>
-                         </p>
-                    </article>
-                </div>
-                <p class="value-card">Nie wiesz, który wariant wybrać? — Podpowiemy na bezpłatnej konsultacji (15 min).</p>
-                <p class="value-card"><strong>*</strong> Posty = aktualności/wiadomości na stronie szkoły.</p>
-                <aside class="card" style="margin-top:1.1rem">
-                    <h3>Dlaczego abonament?</h3>
-                    <p>Jednorazowy audyt to koszt kilku–kilkunastu tysięcy. Abonament rozkłada wydatek i daje stałą
-                        opiekę –
-                        wtedy, kiedy pojawiają się nowe treści.</p>
-                    <p>Dostępność to proces: zmiany na stronie, nowe pliki, aktualizacje prawa. Z nami masz spokój i
-                        papierkologię
-                        ogarniętą.</p>
-                </aside>
-            </div>
-        </section>
-
-        <!-- ===== PORÓWNANIE ===== -->
-        <section class="reveal" aria-labelledby="h-porownanie">
-            <div class="wrap compare">
-                <div class="section-head">
-                    <h2 id="h-porownanie">Audyt vs monitoring <span class="underline" aria-hidden="true"></span></h2>
-                </div>
-                <div class="grid">
-                    <article class="card audit">
-                        <h3>Audyt</h3>
-                        <p><strong>Koszt:</strong> 5 000–20 000 zł / rok</p>
-                        <p><strong>Czekanie:</strong> 1–3 miesiące</p>
-                        <div class="total"><span>Raz na rok</span></div>
-                    </article>
-                    <article class="card monitoring">
-                        <h3>Monitoring</h3>
-                        <p><strong>Koszt:</strong> 200–450 zł / miesiąc</p>
-                        <p><strong>Czas:</strong> na bieżąco</p>
-                        <div class="total"><span>Spokój cały rok</span></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== DLACZEGO MY ===== -->
-        <section class="reveal" aria-labelledby="h-why">
-            <div class="wrap why">
-                <div class="section-head">
-                    <h2 id="h-why">Dlaczego my? <span class="underline" aria-hidden="true"></span></h2>
-                </div>
-                <div class="grid">
-                    <article class="card">
-                        <h3>Skupienie na edukacji</h3>
-                        <p>Szkoły, przedszkola, poradnie. Znamy realia, budżety i procedury. Działamy tak, by nie
-                            zaburzać rytmu
-                            placówki.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Wszystko w jednym</h3>
-                        <p>Monitoring, poprawki, deklaracja, doradztwo – stały opiekun.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Prosty język</h3>
-                        <p>Tłumaczymy prosto. Dajemy krótkie checklisty i gotowe przykłady.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <!-- ===== WYKAZ MC ===== -->
-        <section class="mc-brief" aria-labelledby="mc-brief-title">
-            <div class="mc-brief__inner">
-                <h2 id="mc-brief-title" class="mc-brief__title">Wykaz MC – o co chodzi?</h2>
-                <p class="mc-brief__text">
-                    Co roku Ministerstwo Cyfryzacji typuje serwisy do <strong>badania szczegółowego dostępności</strong>.
-                    Jeśli szkoła trafi do wykazu, eksperci sprawdzają WCAG i dokumentację. Nasz monitoring obniża ryzyko
-                    błędów i daje komplet materiałów na wypadek kontroli.
-                </p>
-        
-                <div class="mc-brief__cta-row">
-                    <a class="mc-brief__cta mc-brief__cta--link" href="https://www.gov.pl/web/dostepnosc-cyfrowa/monitoring"
-                        target="_blank" rel="noopener" data-event="mc_link_click"
-                        aria-label="Zobacz, na czym polega badanie MC (otwiera w nowej karcie)">
-                        Sprawdź, co bada MC →
-                    </a>
-        
-                    <a class="mc-brief__cta mc-brief__cta--primary" href="mailto:kontakt@dostepnoscszkoly.pl?subject=Mini-ocena%20strony&amp;body=Dzie%C5%84%20dobry%2C%20chcemy%2C%20aby%20przygotowali%20Pa%C5%84stwo%20dla%20nas%20mini-ocen%C4%99%20naszej%20strony%20%5Badres%20www%20Pa%C5%84stwa%20strony%5D%2C%20czy%20strona%20ma%20szans%C4%99%20przej%C5%9B%C4%87%20kontrol%C4%99%20Ministerstwa." data-event="cta_primary_click"
-                        aria-label="Zamów mini-ocenę pod badanie MC">
-                        Zamów mini-ocenę (0 zł)
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- SOCIAL PROOF -->
-
-
-        <!-- ===== FAQ ===== -->
-        <section id="faq" class="reveal" aria-labelledby="h-faq">
-            <div class="wrap">
-                <div class="section-head">
-                    <h2 id="h-faq">Najczęstsze pytania <span class="underline" aria-hidden="true"></span></h2>
-                </div>
-                <div class="grid" style="grid-template-columns:repeat(12,1fr)">
-                    <div style="grid-column:1/-1; display:grid; gap:1rem">
-                        <details>
-                            <summary id="q1">Co jeśli moja strona znalazła się w wykazie stron internetowych do badania
-                                szczegółowego?</summary>
-                            <div>To znak, że tym bardziej nie ma na co czekać. Jeśli nie poprawisz strony, a
-                                Ministerstwo sprawdza to co roku, to narażasz się na karę finansową.</div>
-                        </details>
-                        <details>
-                            <summary id="q2">Czy musimy mieć to z mocy prawa?</summary>
-                            <div>Monitoring nie jest wymagany, ale strona ma być dostępna i deklaracja aktualna. Monitoring to najtańszy sposób
-                            utrzymania zgodności.</div>
-                        </details>
-                        <details>
-                            <summary id="q3">Czy to zastępuje audyt?</summary>
-                            <div>To stałe wsparcie zamiast jednorazowego audytu. Gdy pełny audyt będzie konieczny – powiemy wprost.</div>
-                        </details>
-                        <details>
-                            <summary id="q4">Co jeśli nie macie dostępu do strony?</summary>
-                            <div>Dajemy instrukcje dla wykonawcy/IT; możemy też wdrożyć poprawki (zależnie od pakietu).</div>
-                        </details>
-                        <details>
-                            <summary id="q5">Na jak długo jest umowa?</summary>
-                            <div>Rekomendujemy min. 12 miesięcy.</div>
-                        </details>
-                        <details>
-                            <summary id="q6">Czy przygotujecie nas na kontrolę MC?</summary>
-                            <div>Tak. Dostajesz raporty i listę wdrożeń; w razie kontroli masz komplet materiałów.
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CTA KOŃCOWE ===== -->
-        <section class="final reveal" aria-labelledby="h-final">
-            <div class="wrap">
-                <h2 id="h-final">Zacznij dziś. Oddech ulgi jutro. <span class="underline" aria-hidden="true"></span>
-                </h2>
-                <p>Zgodność z prawem + spokój + stały opiekun dostępności cyfrowej.</p>
-                <div class="cta-row">
-                    <a class="btn"
-                        href="mailto:kontakt@dostepnoscszkoly.pl?subject=Zamawiam%20rozmow%C4%99%20o%20monitoringu&body=Dzie%C5%84%20dobry%2C%0A%0AChcemy%20porozmawia%C4%87%20o%20monitoringu%20dost%C4%99pno%C5%9Bci.%0A%0ANazwa%20plac%C3%B3wki%3A%0AStrona%3A%0ATelefon%3A%0ATermin%3A%0A">Zamów
-                        rozmowę</a>
-                </div>
+        <!-- CTA KOŃCOWE -->
+        <section style="background: linear-gradient(135deg, var(--primary) 0%, #1a5a9e 100%); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="color: white;">Zacznij dziś. Spokój jutro.</h2>
+                <p style="color: rgba(255, 255, 255, 0.9); margin: 0 auto 2rem;">Zgodność z prawem + stały opiekun dostępności cyfrowej</p>
+                <a href="mailto:kontakt@dostepnoscszkoly.pl?subject=Zamawiam%20rozmowę%20o%20monitoringu&body=Dzień%20dobry,%0A%0AChcemy%20porozmawiać%20o%20monitoringu%20dostępności.%0A%0ANazwa%20placówki:%0AStrona:%0ATelefon:%0ATermin:%0A"
+                    class="btn btn-accent">Zamów rozmowę</a>
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <div class="wrap" style="display:grid; gap:1.1rem; grid-template-columns:repeat(12,1fr)">
-            <section style="grid-column:span 7">
-                <h2 style="font-size:1.25rem;">Itspace Michał Bednarek</h2>
-                <p>Proste rozwiązania dostępności cyfrowej</p>
-                <p>Tel: <a href="tel:788086901">788 086 901</a><br />Email: <a
-                        href="mailto:kontakt@dostepnoscszkoly.pl">kontakt@dostepnoscszkoly.pl</a><br />Web: <a
-                        href="https://www.dostepnoscszkoly.pl" target="_blank"
-                        rel="noopener">dostepnoscszkoly.pl</a><br />LinkedIn:
-                    <a href="https://www.linkedin.com/in/michalbednarek1" target="_blank"
-                        rel="noopener">@michalbednarek1</a>
-                </p>
-            </section>
-            <section style="grid-column:span 5">
-                <h3>Zgodność z WCAG 2.1</h3>
-                <p>Projekt zgodny z WCAG 2.1 na poziomie AA. Wspieramy nawigację klawiaturą, czytniki ekranu i
-                    preferencje
-                    ruchu.</p>
-            </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h2>Itspace Michał Bednarek</h2>
+                    <p>Proste rozwiązania dostępności cyfrowej</p>
+                    <p>
+                        Tel: <a href="tel:788086901">788 086 901</a><br />
+                        Email: <a href="mailto:kontakt@dostepnoscszkoly.pl">kontakt@dostepnoscszkoly.pl</a><br />
+                        Web: <a href="https://www.dostepnoscszkoly.pl" target="_blank" rel="noopener">dostepnoscszkoly.pl</a><br />
+                        LinkedIn: <a href="https://www.linkedin.com/in/michalbednarek1" target="_blank" rel="noopener">@michalbednarek1</a>
+                    </p>
+                </div>
+                <div>
+                    <h2>Zgodność z WCAG 2.1</h2>
+                    <p>Projekt zgodny z WCAG 2.1 na poziomie AA. Wspieramy nawigację klawiaturą, czytniki ekranu i preferencje ruchu.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Itspace Michał Bednarek. Wszystkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
 
-    <div id="status" aria-live="polite" class="sr-only"></div>
-
-    <noscript>
-        Ta strona używa drobnych animacji i mikro‑interakcji. Jeśli wolisz bez JS – wszystko wciąż działa.
-    </noscript>
-    <!-- ===== Micro JS: scroll reveal, parallax, modal „PDF” ===== -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPGKHJK9Q9"></script>
     <script>
-        (function () {
-            // Scroll reveal
-            const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries) => {
-                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-            }, { rootMargin: '-10% 0px -10% 0px' }) : null;
-            document.querySelectorAll('.reveal').forEach(el => io && io.observe(el));
-
-            // Parallax scribble
-            const scribble = document.querySelector('.scribble');
-            const onScroll = () => {
-                const y = window.scrollY || window.pageYOffset; if (scribble) { scribble.style.transform = 'translateY(' + (y * 0.12) + 'px)'; }
-            };
-            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (scribble && !reduce) { addEventListener('scroll', onScroll, { passive: true }); }
-
-            // Dialog-like modal „PDF”
-            const btnPdf = document.querySelector('[data-open-pdf]');
-            if (btnPdf) {
-                btnPdf.addEventListener('click', () => {
-                    const modal = document.createElement('div');
-                    modal.setAttribute('role', 'dialog'); modal.setAttribute('aria-modal', 'true'); modal.setAttribute('aria-label', 'Odbierz ofertę PDF');
-                    modal.style.position = 'fixed'; modal.style.inset = '0'; modal.style.background = 'rgba(0,0,0,.36)'; modal.style.display = 'grid'; modal.style.placeItems = 'center';
-                    modal.innerHTML = `
-            <div style="background:#fff; border-radius:18px; padding:1.2rem 1.3rem 1.1rem 1.25rem; box-shadow: var(--shadow-2); width:min(92vw, 520px)">
-              <h3 style="margin:.2rem 0 .6rem 0; font-family: Arial, sans-serif;">Odbierz ofertę PDF</h3>
-              <p class="micro-copy">Podaj e‑mail – wyślemy PDF od razu.</p>
-              <form id="pdfForm">
-                <label for="email" style="display:block; font-weight:700; margin-bottom:.25rem">E‑mail</label>
-                <input id="email" name="email" type="email" required autocomplete="email" placeholder="dyrektor@szkola.pl" style="width:100%; padding:.75rem .9rem; border-radius:10px; border:1px solid #D7D2CB"/>
-                <div class="cta-row" style="margin-top:.8rem">
-                  <button class="btn" type="submit">Wyślij PDF</button>
-                  <button class="btn alt" type="button" data-close>Anuluj</button>
-                </div>
-              </form>
-            </div>`;
-                    document.body.appendChild(modal);
-                    const close = () => modal.remove();
-                    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
-                    modal.querySelector('[data-close]').addEventListener('click', close);
-                    modal.querySelector('#pdfForm').addEventListener('submit', (e) => {
-                        e.preventDefault();
-                        const email = modal.querySelector('#email').value.trim();
-                        if (!email) return;
-                        const subject = encodeURIComponent('Oferta PDF – Monitoring dostępności');
-                        const body = encodeURIComponent(`Proszę o przesłanie oferty PDF.
-
-E‑mail: ${email}
-Placówka: 
-Strona: `);
-                        window.location.href = 'mailto:kontakt@dostepnoscszkoly.pl?subject=' + subject + '&body=' + body;
-                        close();
-                    });
-                    modal.querySelector('#email').focus();
-                });
-            }
-        })();
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NPGKHJK9Q9');
     </script>
 
-    <!-- ===== Structured Data ===== -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Monitoring dostępności cyfrowej dla szkół",
-    "provider": {
-      "@type": "Organization",
-      "name": "Itspace Michał Bednarek",
-      "url": "https://www.dostepnoscszkoly.pl"
-    },
-    "areaServed": "PL",
-    "audience": {"@type":"Audience","audienceType":"Szkoły i placówki oświatowe"},
-    "serviceType": "WCAG 2.1 monitoring i wsparcie",
-    "offers": {
-      "@type": "OfferCatalog",
-      "name": "Abonament",
-      "itemListElement": [
-        {"@type": "Offer", "name": "Wariant podstawowy", "price": "175", "priceCurrency": "PLN", "priceSpecification": {"@type":"UnitPriceSpecification","price":"175","priceCurrency":"PLN","unitCode":"MON"}},
-        {"@type": "Offer", "name": "Wariant rozszerzony", "price": "250", "priceCurrency": "PLN"},
-        {"@type": "Offer", "name": "Wariant kompleksowy", "price": "420", "priceCurrency": "PLN"}
-      ]
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Monitoring dostępności cyfrowej dla szkół",
+      "provider": {
+        "@type": "Organization",
+        "name": "Itspace Michał Bednarek",
+        "url": "https://www.dostepnoscszkoly.pl"
+      },
+      "areaServed": "PL",
+      "audience": {"@type":"Audience","audienceType":"Szkoły i placówki oświatowe"},
+      "serviceType": "WCAG 2.1 monitoring i wsparcie",
+      "offers": {
+        "@type": "OfferCatalog",
+        "name": "Abonament",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Wariant podstawowy", "price": "200", "priceCurrency": "PLN"},
+          {"@type": "Offer", "name": "Wariant rozszerzony", "price": "350", "priceCurrency": "PLN"},
+          {"@type": "Offer", "name": "Wariant kompleksowy", "price": "450", "priceCurrency": "PLN"}
+        ]
+      }
     }
-  }
-  </script>
-
-    <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Czy obejmujecie dokumenty PDF?","acceptedAnswer":{"@type":"Answer","text":"Tak. Sprawdzamy i doradzamy, jak poprawić dostępność plików PDF. Dajemy konkretne wskazówki dla osób publikujących."}},
-      {"@type":"Question","name":"Jak szybko reagujecie na problemy?","acceptedAnswer":{"@type":"Answer","text":"Standardowo do 2 dni roboczych. Pilne bariery – tego samego dnia."}},
-      {"@type":"Question","name":"Czy pomagacie w publikacjach BIP?","acceptedAnswer":{"@type":"Answer","text":"Tak. Sprawdzamy i podpowiadamy przed publikacją, żeby treści w BIP były dostępne."}},
-      {"@type":"Question","name":"Czy to zastępuje pełny audyt?","acceptedAnswer":{"@type":"Answer","text":"Nie. Audyt robimy na początku współpracy (w abonamencie) i aktualizujemy przy większych zmianach."}},
-      {"@type":"Question","name":"Co jeśli zmienimy CMS?","acceptedAnswer":{"@type":"Answer","text":"Dostosujemy monitoring do nowego systemu. Duże zmiany techniczne wyceniamy oddzielnie, standardowe przejścia – w abonamencie."}},
-      {"@type":"Question","name":"Jak startuje współpraca?","acceptedAnswer":{"@type":"Answer","text":"Rozmowa, przegląd strony, zakres prac i umowa. Pierwsze poprawki w pierwszym miesiącu."}}
-    ]
-  }
-  </script>
+    </script>
 </body>
 
 </html>
