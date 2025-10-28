@@ -289,70 +289,9 @@
             font-size: .92rem;
             color: color-mix(in oklab, var(--ink) 65%, var(--muted));
         }
-        .social-proof {
-  background: #FFFFFF;
-  color: var(--alert-text);
-  padding: 44px 16px;
-}
-.social-proof__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-}
-.social-proof__title {
-  margin: 0 0 16px 0;
-  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
-}
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
-  gap: 16px 24px;
-  list-style: none;
-  margin: 0 0 16px 0;
-  padding: 0;
-  align-items: center;
-}
-.logo-grid__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 12px;
-  border: 1px dashed rgba(0,0,0,.08); /* subtelna linia; usuń, jeśli masz realne loga */
-  border-radius: 12px;
-  background: #FAFAFA;
-}
-.logo-grid__item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.testimonial {
-  margin: 16px 0 0 0;
-  padding: 16px;
-  border-left: 4px solid var(--alert-cta-bg);
-  background: #FFFDF7;
-  border-radius: 8px;
-}
-.testimonial__quote {
-  margin: 0 0 8px 0;
-  font-style: italic;
-  line-height: 1.6;
-}
-.testimonial__author {
-  margin: 0;
-  font-size: .95rem;
-  opacity: .9;
-}
-
-/* Mobile */
-@media (max-width: 992px) {
-  .logo-grid { grid-template-columns: repeat(3, minmax(100px, 1fr)); }
-}
-@media (max-width: 600px) {
-  .logo-grid { grid-template-columns: repeat(2, minmax(100px, 1fr)); }
-}
-/* Wykaz MC – o co chodzi? */
+        /* mc-brief styles */
 .mc-brief {
-  background: #FDF3E5; /* delikatne nawiązanie do alertu */
+  background: #FDF3E5;
   color: var(--alert-text);
   border-top: 1px solid rgba(0,0,0,.06);
   border-bottom: 1px solid rgba(0,0,0,.06);
@@ -407,48 +346,13 @@
 .mc-brief__cta--primary:hover { background: var(--alert-cta-bg-hover); transform: translateY(-1px); }
 .mc-brief__cta--primary:active { transform: translateY(0); }
 .mc-brief__cta--primary:focus-visible { outline: var(--focus-ring); outline-offset: 2px; box-shadow: none; }
-.value-section {
-  background: #FFFFFF;
-  color: var(--alert-text);
-  padding: 48px 16px;
-}
-.value-section__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-}
-.value-section__title {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  margin: 0 0 20px 0;
-}
-.value-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
+
 .value-card {
   background: #F8F9FA;
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 12px;
   padding: 18px;
   box-shadow: var(--shadow);
-}
-.value-card__title {
-  margin: 0 0 8px 0;
-  font-size: 1.05rem;
-}
-.value-card__text {
-  margin: 0;
-  line-height: 1.6;
-}
-/* Mobile */
-@media (max-width: 992px) {
-  .value-list { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 600px) {
-  .value-list { grid-template-columns: 1fr; }
 }
 
         /* Szkicowane tło – delikatny parallax */
@@ -895,11 +799,10 @@
             <nav>
                 <div class="brand">
                     <span class="mark" aria-hidden="true"></span>
-                    <a href="https://dostepnoscszkoly.pl/#" aria-label="Itspace Michał Bednarek – strona główna">Itspace
-                        Michał Bednarek
-                        <pre>Proste rozwiązania dostępności cyfrowej</pre>
+                    <a href="https://dostepnoscszkoly.pl/#" aria-label="Itspace Michał Bednarek – strona główna">
+                        <strong>Itspace Michał Bednarek</strong>
+                        <span style="display:block;font-size:0.85rem;font-weight:400;opacity:0.85;">Proste rozwiązania dostępności cyfrowej</span>
                     </a>
-
                 </div>
 
                 <div class="top-links" id="primary-nav" role="navigation" aria-label="Nawigacja główna">
@@ -970,23 +873,23 @@
                 <div class="section-head">
                     <h2 id="h-problemy">Znasz te problemy? <span aria-hidden="true" class="underline"></span></h2>
                 </div>
-                <div class="grid pains" role="list">
-                    <article class="card" role="listitem">
+                <div class="grid pains">
+                    <article class="card">
                         <h3><span class="pain-icon" aria-hidden="true">⚠️</span>Strona znalazła się w wykazie stron
                             internetowych do badania szczegółowego?</h3>
                         <p>To znak, że Ministerstwo znalazło poważne problemy na Twojej stronie.</p>
                     </article>
-                    <article class="card" role="listitem">
+                    <article class="card">
                         <h3><span class="pain-icon" aria-hidden="true">⏰</span>Brak czasu i kadry</h3>
                         <p>Nauczyciele toną w obowiązkach. Nikt nie pilnuje dostępności, aż do kontroli.</p>
                     </article>
-                    <article class="card" role="listitem">
-                        <h3><span class="pain-icon" aria-hidden="true">📄</span>Brak corocznego przeglądu deklarcji
+                    <article class="card">
+                        <h3><span class="pain-icon" aria-hidden="true">📄</span>Brak corocznego przeglądu deklaracji
                             dostępności?</h3>
                         <p>Deklaracja dostępności musi być przeglądana i aktualizowana co roku. Obligatryjnie.</p>
-                        <pre><a href="/deklaracja-dostepnosci.html">Przeczytaj więcej o deklaracji dostępności.</a></pre>
+                        <p><a href="/deklaracja-dostepnosci.html">Przeczytaj więcej o deklaracji dostępności</a></p>
                     </article>
-                    <article class="card" role="listitem">
+                    <article class="card">
                         <h3><span class="pain-icon" aria-hidden="true">❓</span>Co właściwie poprawić?</h3>
                         <p>PDF-y, zdjęcia, ogłoszenia. Kto sprawdza kontrast, opisy alternatywne, strukturę nagłówków?
                         </p>
@@ -995,57 +898,71 @@
             </div>
         </section>
 
-        <!-- ===== ROZWIĄZANIE ===== -->
-        <section id="oferta" aria-labelledby="h-rozwiazanie" class="reveal">
+        <!-- ===== JAK WYGLĄDA WSPÓŁPRACA ===== -->
+        <section id="oferta" aria-labelledby="h-wspolpraca" class="reveal">
             <div class="wrap">
                 <div class="section-head">
-                    <h2 id="h-rozwiazanie">Jak to działa <span class="underline"
-                            aria-hidden="true"></span></h2>
+                    <h2 id="h-wspolpraca">Jak wygląda współpraca <span class="underline" aria-hidden="true"></span></h2>
                 </div>
+
+                <div class="card" style="margin-bottom:1.5rem;background:#F0F7F4;padding:1.5rem;">
+                    <h3 style="margin-top:0;">Start: Pierwsze 2 tygodnie</h3>
+                    <ul style="margin-bottom:0;">
+                        <li><strong>Audyt wstępny</strong> – sprawdzamy całą stronę pod kątem WCAG 2.1 (kontrast, nagłówki, linki, formularze, PDF-y)</li>
+                        <li><strong>Raport z priorytetami</strong> – dostajesz listę tego, co wymaga pilnej poprawy</li>
+                        <li><strong>Pierwsza aktualizacja Deklaracji Dostępności</strong> – przygotowujemy lub aktualizujemy dokument</li>
+                    </ul>
+                </div>
+
                 <div class="grid steps">
                     <div class="card step">
-                        <div class="step-num">Krok 1</div>
-                        <h3>Skan i lista poprawek – wykrywamy problemy z dostępnością na Twojej stronie.</h3>
-                        
+                        <div class="step-num">Co miesiąc</div>
+                        <h3>Monitoring i szybka reakcja</h3>
+                        <p>Skanujemy stronę automatycznie + sprawdzamy ręcznie nowe treści. Wykryte błędy zgłaszamy do Was lub poprawiamy bezpośrednio (zależnie od pakietu).</p>
                     </div>
                     <div class="card step">
-                        <div class="step-num">Krok 2</div>
-                        <h3>Poprawki i rekomendacje – wdrażamy lub dajemy gotowe instrukcje</h3>
-                        
+                        <div class="step-num">Co kwartał</div>
+                        <h3>Raport i konsultacja</h3>
+                        <p>Otrzymujesz szczegółowy raport: co zostało poprawione, co wymaga uwagi, jak wygląda stan strony. W wyższych pakietach – dodatkowa konsultacja telefoniczna.</p>
                     </div>
                     <div class="card step">
-                        <div class="step-num">Krok 3</div>
-                        <h3>Stały nadzór – co miesiąc monitoring, kwartalny raport, coroczna aktualizacja deklaracji.</h3>
-                        
+                        <div class="step-num">Co rok</div>
+                        <h3>Aktualizacja deklaracji (obowiązek prawny)</h3>
+                        <p>Do 31 marca każdego roku aktualizujemy Deklarację Dostępności zgodnie z art. 11 ustawy. Ty masz spokój – my pilnujemy terminów.</p>
                     </div>
-                   
                 </div>
-                <div> <p class="value-card">W razie kontroli masz historię działań i raporty — łatwiej wykazać należytą staranność.</p></div>
-                <aside class="card" style="margin-top:1.1rem;background:#F0F7F4">
-                    <h3>W praktyce</h3>
-                    <p>Wy publikujecie. My czuwamy. Zgłaszamy, poprawiamy i dokumentujemy – tak, żeby kontrola nie miała
-                        się do
-                        czego przyczepić.</p>
+
+                <aside class="card" style="margin-top:1.5rem;background:#FEF9E6;border-left:4px solid var(--warn);">
+                    <h3 style="margin-top:0;">Co jeśli trafi was kontrola z Ministerstwa?</h3>
+                    <p style="margin-bottom:0;">Masz pełną dokumentację: raporty, historię poprawek, aktualną deklarację. To pokazuje "należytą staranność" i minimalizuje ryzyko kary. Dodatkowo – pomagamy przygotować odpowiedzi na pytania inspektorów.</p>
                 </aside>
             </div>
         </section>
 
         <!-- ===== CO OTRZYMASZ ===== -->
         <section aria-labelledby="h-korzysci" class="reveal">
-            <div class="wrap benefits">
+            <div class="wrap">
                 <div class="section-head">
-                    <h2 id="h-korzysci">Co zyskasz dzięki usłudze? <span class="underline" aria-hidden="true"></span>
-                    </h2>
+                    <h2 id="h-korzysci">Co zyskujesz <span class="underline" aria-hidden="true"></span></h2>
                 </div>
-                <ul>
-                    <li><strong>Zawsze aktualną deklarację dostępności</strong></li>
-                    <li>Mniejsze ryzyko na kontrolę z Ministerstwa</li>
-                    <li>Oszczędność pieniędzy</li>
-                    <li>Stałe wsparcie mail/telefon</li>
-                    <li>Szybkie odpowiedzi na bieżące pytania</li>
-                    <li>Oszczędność czasu nauczycieli</li>
-                    <li>Papierowy certyfikat oprawiony w ramkę do powieszenia</li>
-                </ul>
+                <div class="grid" style="grid-template-columns:repeat(12,1fr);">
+                    <div class="card" style="grid-column:span 3;">
+                        <h3>Spokój dyrektora</h3>
+                        <p>Aktualna deklaracja, raporty i dokumentacja – wszystko w jednym miejscu, gotowe na wypadek kontroli.</p>
+                    </div>
+                    <div class="card" style="grid-column:span 3;">
+                        <h3>Mniej ryzyka</h3>
+                        <p>Stały monitoring wykrywa błędy wcześniej niż kontrola MC. Minimalizujesz ryzyko kar finansowych.</p>
+                    </div>
+                    <div class="card" style="grid-column:span 3;">
+                        <h3>Oszczędność czasu</h3>
+                        <p>Nauczyciele i sekretariat dostają konkretne instrukcje lub gotowe poprawki – nie muszą być ekspertami WCAG.</p>
+                    </div>
+                    <div class="card" style="grid-column:span 3;">
+                        <h3>Oszczędność pieniędzy</h3>
+                        <p>Abonament 200–450 zł/msc to 2–5 razy mniej niż koszt jednorazowego audytu (5–20 tys. zł).</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1073,8 +990,8 @@
                     <h2 id="h-cennik">Cennik i warunki <span class="underline" aria-hidden="true"></span></h2>
                 </div>
                 <p class="value-card">Wybierz wariant dopasowany do wielkości szkoły. Możesz zrezygnować po okresie, który ustalimy w umowie.</p>
-                <div class="grid pricing" role="list">
-                    <article class="card" role="listitem" aria-label="Wariant podstawowy">
+                <div class="grid pricing">
+                    <article class="card" aria-label="Wariant podstawowy">
                         <h3>Wariant podstawowy</h3>
                         <div class="price">200 zł netto/mies.</div>
                         <ul>
@@ -1094,7 +1011,7 @@
   Wybieram plan
 </a></p>
                     </article>
-                    <article class="card" role="listitem"
+                    <article class="card"
                         aria-label="Wariant rozszerzony - najczęściej wybierany przez Klientów">
                         <span class="best" aria-hidden="true">Najczęściej wybierany</span>
                         <h3>Wariant rozszerzony</h3>
@@ -1116,7 +1033,7 @@
 </a>
 </p>
                     </article>
-                    <article class="card" role="listitem" aria-label="Wariant kompleksowy">
+                    <article class="card" aria-label="Wariant kompleksowy">
                         <h3>Wariant kompleksowy</h3>
                         <div class="price">450 zł netto/msc</div>
                         <ul>
@@ -1199,33 +1116,6 @@
                         </p>
                     </article>
                 </div>
-            </div>
-        </section>
-        <!-- ===== DLACZEGO TO SIE OPŁACA ===== -->
-        <section class="value-section" aria-labelledby="value-title">
-            <div class="value-section__inner">
-                <h2 id="value-title" class="value-section__title">Dlaczego to się opłaca</h2>
-        
-                <ul class="value-list" role="list">
-                    <li class="value-card">
-                        <h3 class="value-card__title">Mniej ryzyka naruszeń</h3>
-                        <p class="value-card__text">Stały monitoring wykrywa problemy wcześniej niż kontrola i zapobiega
-                            kumulacji błędów.</p>
-                    </li>
-                    <li class="value-card">
-                        <h3 class="value-card__title">Spokój dyrektora</h3>
-                        <p class="value-card__text">Raporty, dokumentacja i aktualna Deklaracja Dostępności – wszystko w jednym
-                            miejscu.</p>
-                    </li>
-                    <li class="value-card">
-                        <h3 class="value-card__title">Przygotowanie pod MC</h3>
-                        <p class="value-card__text">W razie badania masz historię działań i gotowe materiały do okazania.</p>
-                    </li>
-                    <li class="value-card">
-                        <h3 class="value-card__title">Oszczędność czasu</h3>
-                        <p class="value-card__text">Sekretariat/IT dostaje konkretne instrukcje i gotowe poprawki.</p>
-                    </li>
-                </ul>
             </div>
         </section>
         <!-- ===== WYKAZ MC ===== -->
@@ -1314,7 +1204,7 @@
     <footer role="contentinfo">
         <div class="wrap" style="display:grid; gap:1.1rem; grid-template-columns:repeat(12,1fr)">
             <section style="grid-column:span 7">
-                <h3>Itspace Michał Bednarek</h3>
+                <h2 style="font-size:1.25rem;">Itspace Michał Bednarek</h2>
                 <p>Proste rozwiązania dostępności cyfrowej</p>
                 <p>Tel: <a href="tel:788086901">788 086 901</a><br />Email: <a
                         href="mailto:kontakt@dostepnoscszkoly.pl">kontakt@dostepnoscszkoly.pl</a><br />Web: <a
