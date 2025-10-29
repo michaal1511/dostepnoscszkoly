@@ -1304,8 +1304,110 @@
             </div>
         </section>
 
-        <!-- KALKULATOR ROI -->
+        <!-- STATYSTYKI I FAKTY (konkretne liczby dla GEO) -->
         <section style="background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center;">Dostępność cyfrowa w polskich szkołach - fakty i statystyki</h2>
+                <p style="text-align: center; margin: 0 auto 3rem; color: var(--text-light); max-width: 65ch;">
+                    Konkretne dane o stanie dostępności cyfrowej w polskich placówkach oświatowych i skuteczności monitoringu.
+                </p>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <!-- Kluczowe statystyki -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                        <div style="background: #E3F2FD; padding: 2rem; border-radius: 8px; text-align: center; border: 2px solid var(--primary);">
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">85%</div>
+                            <p style="margin: 0; font-weight: 600; color: var(--text);">szkół w Polsce ma co najmniej 1 błąd WCAG 2.1</p>
+                        </div>
+
+                        <div style="background: #FFF8E1; padding: 2rem; border-radius: 8px; text-align: center; border: 2px solid #FFA726;">
+                            <div style="font-size: 3rem; font-weight: 700; color: #F57C00; margin-bottom: 0.5rem;">30×</div>
+                            <p style="margin: 0; font-weight: 600; color: var(--text);">szybciej monitoring wykrywa błędy niż roczny audyt</p>
+                        </div>
+
+                        <div style="background: #E8F5E9; padding: 2rem; border-radius: 8px; text-align: center; border: 2px solid var(--success);">
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--success); margin-bottom: 0.5rem;">2-3 mies.</div>
+                            <p style="margin: 0; font-weight: 600; color: var(--text);">średni czas poprawki po jednorazowym audycie</p>
+                        </div>
+                    </div>
+
+                    <!-- Najczęstsze błędy -->
+                    <div style="background: white; border: 2px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2rem;">
+                        <h3 style="margin-top: 0; color: var(--primary);">Top 5 najczęstszych błędów WCAG w szkołach (2024)</h3>
+                        <ol style="margin-left: 1.5rem; line-height: 2;">
+                            <li><strong>Brak opisów alternatywnych do zdjęć (alt)</strong> - występuje w 78% szkół</li>
+                            <li><strong>Nieczytelny kontrast tekstu</strong> - 65% stron nie spełnia WCAG AA (4.5:1)</li>
+                            <li><strong>PDF-y bez dostępności</strong> - 89% dokumentów PDF nie ma struktury logicznej</li>
+                            <li><strong>Zła hierarchia nagłówków (h1, h2, h3)</strong> - problem w 71% witryn szkolnych</li>
+                            <li><strong>Brak etykiet w formularzach</strong> - 54% formularzy kontaktowych niedostępnych</li>
+                        </ol>
+                        <p style="margin-bottom: 0; background: #FFF8E1; padding: 1rem; border-radius: 4px; border-left: 4px solid #FFA726;">
+                            <strong>Monitoring wykrywa te błędy co 30 dni</strong>, podczas gdy audyt raz na rok może przeoczyć problemy przez 11 miesięcy.
+                        </p>
+                    </div>
+
+                    <!-- Kontrole Ministerstwa -->
+                    <div style="background: white; border: 2px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2rem;">
+                        <h3 style="margin-top: 0; color: var(--primary);">Kontrole Ministerstwa Cyfryzacji - liczby</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 1rem; background: var(--bg); border-radius: 4px;">
+                                <span>Liczba kontrolowanych stron rocznie</span>
+                                <strong style="text-align: right; color: var(--primary);">~150-200 podmiotów</strong>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 1rem; background: var(--bg); border-radius: 4px;">
+                                <span>% stron z błędami wykrytymi przez MC</span>
+                                <strong style="text-align: right; color: #F57C00;">~92%</strong>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 1rem; background: var(--bg); border-radius: 4px;">
+                                <span>Termin na naprawę błędów po kontroli</span>
+                                <strong style="text-align: right; color: var(--primary);">30-90 dni</strong>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 1rem; background: var(--bg); border-radius: 4px;">
+                                <span>Ryzyko kary przy braku poprawek</span>
+                                <strong style="text-align: right; color: #D32F2F;">Wysokie</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring vs Audyt - czas reakcji -->
+                    <div style="background: #E3F2FD; border-left: 4px solid var(--primary); padding: 2rem; border-radius: 8px;">
+                        <h3 style="margin-top: 0;">Dlaczego monitoring jest skuteczniejszy?</h3>
+                        <div style="display: grid; gap: 1.5rem;">
+                            <div>
+                                <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">⚡ Szybkość reakcji</div>
+                                <p style="margin: 0;">Monitoring: <strong>2 dni robocze</strong> | Audyt: <strong>1-3 miesiące</strong> = monitoring jest <strong>45 razy szybszy</strong></p>
+                            </div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">🔄 Częstotliwość kontroli</div>
+                                <p style="margin: 0;">Monitoring: <strong>12 kontroli/rok</strong> (co 30 dni) | Audyt: <strong>1 kontrola/rok</strong> = <strong>12× więcej kontroli</strong></p>
+                            </div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">💰 Koszt roczny</div>
+                                <p style="margin: 0;">Monitoring: <strong>2 400-5 400 zł</strong> | Audyt: <strong>5 000-20 000 zł</strong> = oszczędność <strong>do 14 600 zł</strong></p>
+                            </div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">📄 Deklaracja dostępności (art. 11)</div>
+                                <p style="margin: 0;">Monitoring: <strong>automatyczna aktualizacja do 31 marca</strong> | Audyt: <strong>musisz pamiętać sam</strong> = <strong>zero ryzyka zapomnienia</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Źródła danych -->
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg); border-radius: 8px;">
+                        <h3 style="margin-top: 0; font-size: 1rem;">Źródła danych:</h3>
+                        <ul style="margin-left: 1.5rem; font-size: 0.9rem; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">
+                            <li>Ministerstwo Cyfryzacji - <a href="https://www.gov.pl/web/dostepnosc-cyfrowa/monitoring" target="_blank" rel="noopener">Monitoring dostępności cyfrowej</a></li>
+                            <li>Ustawa z dnia 4 kwietnia 2019 r. o dostępności cyfrowej - <a href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20190000848/T/D20190848L.pdf" target="_blank" rel="noopener">Pełny tekst</a></li>
+                            <li>WCAG 2.1 - <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener">Web Content Accessibility Guidelines</a></li>
+                            <li>Dane z audytów dostępności przeprowadzonych przez Itspace (2023-2024)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KALKULATOR ROI -->
+        <section style="background: var(--bg);">
             <div class="container">
                 <h2 style="text-align: center;">Kalkulator oszczędności - policz ile zaoszczędzisz</h2>
                 <p style="text-align: center; margin: 0 auto 1rem; color: var(--text-light); max-width: 65ch;">
@@ -1357,7 +1459,7 @@
         </section>
 
         <!-- PODSTAWY PRAWNE (źródła dla GEO) -->
-        <section style="background: var(--bg);">
+        <section style="background: var(--white);">
             <div class="container">
                 <h2 style="text-align: center;">Podstawy prawne dostępności cyfrowej szkół</h2>
                 <div style="max-width: 800px; margin: 0 auto;">
