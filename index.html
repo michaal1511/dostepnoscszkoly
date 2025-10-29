@@ -219,14 +219,14 @@
         }
 
         .btn-accent {
-            background: var(--accent);
+            background: var(--primary);
             color: white;
         }
 
         .btn-accent:hover {
-            background: #e55a28;
+            background: #0d3f6b;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.3);
         }
 
         .btn-outline {
@@ -468,21 +468,24 @@
         }
 
         .pricing-card.featured {
-            border-color: var(--primary);
-            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.15);
+            border-color: #FF6B35;
+            border-top-width: 4px;
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
         }
 
         .pricing-badge {
             position: absolute;
-            top: -12px;
+            top: -1px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--accent);
-            color: white;
-            padding: 0.25rem 1rem;
-            border-radius: 999px;
-            font-size: 0.875rem;
-            font-weight: 600;
+            background: white;
+            color: #FF6B35;
+            padding: 0.25rem 1.5rem;
+            border-radius: 0;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .pricing-card h3 {
@@ -663,7 +666,7 @@
             }
 
             .timeline::before {
-                left: 24px;
+                left: 32px;
             }
 
             .timeline-item {
@@ -671,17 +674,22 @@
                 gap: 1.5rem;
             }
 
-            .timeline-content:first-child {
-                display: none;
+            .timeline-item .timeline-content:first-child {
+                grid-column: 2;
+                order: 2;
             }
 
-            .timeline-item:nth-child(even) .timeline-content:first-child {
+            .timeline-item .timeline-spacer {
                 display: none;
             }
 
             .timeline-marker {
-                width: 40px;
-                height: 40px;
+                width: 64px;
+                height: 64px;
+                font-size: 0.65rem;
+                text-align: center;
+                line-height: 1.2;
+                padding: 0.25rem;
             }
 
             .pricing-grid {
@@ -1039,6 +1047,62 @@
                     <p><strong>Art. 11 ustawy</strong> (<a href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20190000848/T/D20190848L.pdf" target="_blank" rel="noopener">treść artykułu</a>) mówi o konieczności przeglądu i aktualizacji deklaracji dostępności do 31 marca każdego roku.</p>
                     <p>W ramach monitoringu robimy to za Was. Nie musicie o tym pamiętać!</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- DLA KOGO TO NIE JEST -->
+        <section style="background: var(--bg);">
+            <div class="container">
+                <h2 style="text-align: center;">Dla kogo to NIE jest</h2>
+                <p style="text-align: center; margin: 0 auto 3rem; color: var(--text-light);">
+                    Monitoring dostępności to nie dla każdego. Bądźmy szczerzy – jeśli:
+                </p>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="background: white; border-left: 4px solid #E2E8F0; padding: 1.5rem 2rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3 style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-light); font-size: 1.5rem;">✗</span>
+                            Publikujesz treści raz na kwartał lub rzadziej
+                        </h3>
+                        <p style="margin: 0; color: var(--text-light); font-size: 1rem;">
+                            Wtedy <strong>jednorazowy audyt co 1-2 lata wystarczy</strong>. Monitoring ma sens przy regularnych zmianach na stronie.
+                        </p>
+                    </div>
+
+                    <div style="background: white; border-left: 4px solid #E2E8F0; padding: 1.5rem 2rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3 style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-light); font-size: 1.5rem;">✗</span>
+                            Twoja strona wymaga redesignu lub jest na bardzo starej platformie
+                        </h3>
+                        <p style="margin: 0; color: var(--text-light); font-size: 1rem;">
+                            <strong>Najpierw zrób nową stronę</strong>, potem monitoring. Łatanie starej, niedostępnej strony to walka z wiatrakami.
+                        </p>
+                    </div>
+
+                    <div style="background: white; border-left: 4px solid #E2E8F0; padding: 1.5rem 2rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3 style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-light); font-size: 1.5rem;">✗</span>
+                            Szukasz jednorazowego "certyfikatu" i zapomnienia o temacie
+                        </h3>
+                        <p style="margin: 0; color: var(--text-light); font-size: 1rem;">
+                            Dostępność to proces, nie jednorazowe zadanie. <strong>Jeśli potrzebujesz tylko dokumentu</strong> – zamów audyt, nie monitoring.
+                        </p>
+                    </div>
+
+                    <div style="background: white; border-left: 4px solid #E2E8F0; padding: 1.5rem 2rem; border-radius: 8px;">
+                        <h3 style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-light); font-size: 1.5rem;">✗</span>
+                            Budżet poniżej 200 zł/msc
+                        </h3>
+                        <p style="margin: 0; color: var(--text-light); font-size: 1rem;">
+                            Monitoring wymaga regularnej pracy eksperta. <strong>Przy niższym budżecie lepiej zainwestować w szkolenie własnej kadry</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 2.5rem; font-size: 1.125rem; color: var(--text);">
+                    <strong>Jeśli powyższe Cię nie dotyczy</strong> – monitoring to najlepsza opcja dla Twojej szkoły. 👇
+                </p>
             </div>
         </section>
 
