@@ -34,13 +34,13 @@
         /* ===== NOWY MINIMALISTYCZNY DESIGN ===== */
         :root {
             --primary: #0F4C81;
-            --accent: #FF6B35;
+            --accent: #047857;
             --bg: #FAFBFC;
             --text: #1A202C;
-            --text-light: #718096;
+            --text-light: #000;
             --border: #E2E8F0;
             --white: #FFFFFF;
-            --success: #10B981;
+            --success: #097B55;
             --max-width: 1140px;
         }
 
@@ -479,13 +479,14 @@
             left: 50%;
             transform: translateX(-50%);
             background: white;
-            color: #FF6B35;
+            color: #D14115;
             padding: 0.25rem 1.5rem;
             border-radius: 0;
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            border: 1px solid #FF6B35;
         }
 
         .pricing-card h3 {
@@ -728,6 +729,117 @@
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             border: 0;
+        }
+
+        /* ===== ROI CALCULATOR ===== */
+        .calculator-container {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator-input-group {
+            margin-bottom: 2rem;
+        }
+
+        .calculator-input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .calculator-select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .calculator-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1);
+        }
+
+        .calculator-select:hover {
+            border-color: var(--primary);
+        }
+
+        .calculator-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .calculator-result-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            text-align: center;
+        }
+
+        .calculator-result-card.monitoring {
+            background: #E3F2FD;
+            border-color: var(--primary);
+        }
+
+        .calculator-result-card.audit {
+            background: #FFF8E1;
+            border-color: #FFE082;
+        }
+
+        .calculator-result-card.savings {
+            background: #E8F5E9;
+            border-color: var(--success);
+        }
+
+        .calculator-result-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .calculator-result-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .calculator-result-card.savings .calculator-result-value {
+            color: var(--success);
+        }
+
+        .calculator-result-description {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .calculator-container {
+                padding: 1.5rem;
+            }
+
+            .calculator-results {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-result-value {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
@@ -1192,8 +1304,60 @@
             </div>
         </section>
 
-        <!-- PODSTAWY PRAWNE (źródła dla GEO) -->
+        <!-- KALKULATOR ROI -->
         <section style="background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center;">Kalkulator oszczędności - policz ile zaoszczędzisz</h2>
+                <p style="text-align: center; margin: 0 auto 1rem; color: var(--text-light); max-width: 65ch;">
+                    Porównaj roczny koszt monitoringu dostępności z ceną jednorazowego audytu. Zobacz, ile możesz zaoszczędzić wybierając stałe wsparcie.
+                </p>
+
+                <div class="calculator-container">
+                    <div class="calculator-input-group">
+                        <label for="package-select">Wybierz pakiet monitoringu:</label>
+                        <select id="package-select" class="calculator-select" aria-label="Wybierz pakiet monitoringu dostępności">
+                            <option value="200">Podstawowy - 200 zł/msc (1 strona, 3 mies. postów)</option>
+                            <option value="350" selected>Rozszerzony - 350 zł/msc (2 strony, 6 mies. postów)</option>
+                            <option value="450">Kompleksowy - 450 zł/msc (2 strony, 12 mies. postów)</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator-results">
+                        <div class="calculator-result-card monitoring">
+                            <div class="calculator-result-label">Monitoring roczny</div>
+                            <div class="calculator-result-value" id="monitoring-cost">4 200 zł</div>
+                            <p class="calculator-result-description">Stała opieka przez 12 miesięcy</p>
+                        </div>
+
+                        <div class="calculator-result-card audit">
+                            <div class="calculator-result-label">Audyt jednorazowy</div>
+                            <div class="calculator-result-value">5 000–20 000 zł</div>
+                            <p class="calculator-result-description">Średnio: 12 500 zł</p>
+                        </div>
+
+                        <div class="calculator-result-card savings">
+                            <div class="calculator-result-label">Twoje oszczędności</div>
+                            <div class="calculator-result-value" id="savings-amount">do 8 300 zł</div>
+                            <p class="calculator-result-description" id="savings-percentage">Oszczędzasz 66% rocznie</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #E3F2FD; border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                        <h3 style="margin-top: 0; font-size: 1.125rem;">Co dostajesz w ramach monitoringu?</h3>
+                        <ul style="margin-left: 1.5rem; margin-bottom: 0;">
+                            <li><strong>Stałe wsparcie</strong> - nie tylko raport, ale faktyczna pomoc przy poprawkach</li>
+                            <li><strong>Comiesięczne kontrole</strong> - nowe treści sprawdzane regularnie</li>
+                            <li><strong>Aktualna deklaracja</strong> - automatyczna aktualizacja do 31 marca (art. 11 ustawy)</li>
+                            <li><strong>Dokumentacja dla MC</strong> - pełna historia działań na wypadek kontroli</li>
+                            <li><strong>Spokój dyrektora</strong> - zero ryzyka zapomnienia o obowiązkach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PODSTAWY PRAWNE (źródła dla GEO) -->
+        <section style="background: var(--bg);">
             <div class="container">
                 <h2 style="text-align: center;">Podstawy prawne dostępności cyfrowej szkół</h2>
                 <div style="max-width: 800px; margin: 0 auto;">
@@ -1394,6 +1558,49 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-NPGKHJK9Q9');
+    </script>
+
+    <!-- ROI Calculator -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const packageSelect = document.getElementById('package-select');
+            const monitoringCostEl = document.getElementById('monitoring-cost');
+            const savingsAmountEl = document.getElementById('savings-amount');
+            const savingsPercentageEl = document.getElementById('savings-percentage');
+
+            function calculateROI() {
+                const monthlyPrice = parseInt(packageSelect.value);
+                const annualMonitoring = monthlyPrice * 12;
+                const averageAudit = 12500; // średnia cena audytu
+                const minAudit = 5000;
+                const maxAudit = 20000;
+
+                // Oszczędności w stosunku do średniej ceny audytu
+                const savings = averageAudit - annualMonitoring;
+                const savingsMax = maxAudit - annualMonitoring;
+                const percentage = Math.round((savings / averageAudit) * 100);
+
+                // Format numbers with space as thousands separator
+                const formatNumber = (num) => num.toLocaleString('pl-PL');
+
+                // Update DOM
+                monitoringCostEl.textContent = formatNumber(annualMonitoring) + ' zł';
+
+                if (savingsMax > savings) {
+                    savingsAmountEl.textContent = 'do ' + formatNumber(savingsMax) + ' zł';
+                } else {
+                    savingsAmountEl.textContent = formatNumber(savings) + ' zł';
+                }
+
+                savingsPercentageEl.textContent = 'Oszczędzasz ' + percentage + '% rocznie';
+            }
+
+            // Initial calculation
+            calculateROI();
+
+            // Recalculate on change
+            packageSelect.addEventListener('change', calculateROI);
+        });
     </script>
 
     <!-- Structured Data -->
